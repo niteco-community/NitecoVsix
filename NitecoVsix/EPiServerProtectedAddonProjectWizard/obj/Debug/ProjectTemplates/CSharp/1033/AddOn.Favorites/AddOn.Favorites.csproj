@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{319C5A21-69D6-425B-A0DA-2D3734461439}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AddOn.Favorites</RootNamespace>
+    <AssemblyName>AddOn.Favorites</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <RestorePackages>true</RestorePackages>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CreateVsixContainer>false</CreateVsixContainer>
+    <DeployExtension>false</DeployExtension>
+    <DeployVSTemplates>false</DeployVSTemplates>
+    <CopyVsixManifestToOutput>false</CopyVsixManifestToOutput>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\LocalPackages\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="AssemblyInfo.cs" />
+    <None Include="Controllers\FavoritesStore.cs" />
+    <None Include="Models\FavoriteModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Components\FavoritesComponent.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedLangFiles\addon_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include=".nuget\NuGet.exe" />
+    <Content Include="ClientResources\addon\command\AddFavorite.js" />
+    <Content Include="ClientResources\addon\command\FavoriteCommandProvider.js" />
+    <Content Include="ClientResources\addon\command\RemoveFavorite.js" />
+    <Content Include="ClientResources\addon\component\Favorites.js" />
+    <Content Include="ClientResources\addon\FavoriteModule.js" />
+    <Content Include="ClientResources\css\images\icons.png" />
+    <Content Include="ClientResources\css\styles.css">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>styles.less</DependentUpon>
+    </Content>
+    <Content Include="License.txt" />
+    <Content Include="module.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="ProjectTemplate.csproj" />
+    <None Include="AddOn.Favorites.ico" />
+    <VSTemplate Include="AddOn.Favorites.vstemplate" />
+    <None Include=".nuget\NuGet.Config" />
+    <None Include=".nuget\NuGet.targets" />
+    <None Include="AddOn.Favorites.nuspec" />
+    <None Include="ClientResources\css\styles.less" />
+    <None Include="msbuild\Main.proj" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Castle.Core">
+      <Version>4.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Castle.Windsor">
+      <Version>4.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPiServer.CMS">
+      <Version>11.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPiServer.CMS.AspNet">
+      <Version>11.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPiServer.CMS.Core">
+      <Version>11.12.0</Version>
+    </PackageReference>
+    <PackageReference Include="EPiServer.CMS.UI">
+      <Version>11.20.1</Version>
+    </PackageReference>
+    <PackageReference Include="log4net">
+      <Version>1.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Mvc">
+      <Version>5.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>2.0.20710</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebPages">
+      <Version>2.0.20710</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Tpl.Dataflow">
+      <Version>4.5.24</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.Infrastructure">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="structuremap">
+      <Version>2.6.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.AccessControl">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Xml">
+      <Version>4.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Permissions">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Principal.Windows">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.AccessControl">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(ProjectDir)\.nuget\NuGet.targets" Condition="Exists('$(ProjectDir)\.nuget\NuGet.targets')" />
+  <Import Project="$(ProjectDir)\msbuild\Main.proj" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(ProjectDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(ProjectDir)\.nuget\NuGet.targets'))" />
+  </Target>
+</Project>

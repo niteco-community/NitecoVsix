@@ -2,3 +2,5 @@
 ## EPiServer Files
 ######################
 *License.config
+/NitecoVsix/.vs/NitecoVsix/v16
+/NitecoVsix/AddOn.Favorites/.vs/AddOn.Favorites/v16/Server/sqlite3

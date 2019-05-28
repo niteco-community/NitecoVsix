@@ -1,0 +1,205 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {}
+  },
+  "projects": {
+    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj",
+        "projectName": "AddOn.Favorites",
+        "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj",
+        "packagesPath": "C:\\Users\\HuyHuan\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\HuyHuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.episerver.com/feed/packages.svc/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "EPiServer.CMS": {
+              "target": "Package",
+              "version": "[11.12.0, )"
+            },
+            "EPiServer.CMS.AspNet": {
+              "target": "Package",
+              "version": "[11.12.0, )"
+            },
+            "EPiServer.CMS.Core": {
+              "target": "Package",
+              "version": "[11.12.0, )"
+            },
+            "EPiServer.CMS.UI": {
+              "target": "Package",
+              "version": "[11.20.1, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNet.Razor": {
+              "target": "Package",
+              "version": "[2.0.20710, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[2.0.20710, )"
+            },
+            "Microsoft.Tpl.Dataflow": {
+              "target": "Package",
+              "version": "[4.5.24, )"
+            },
+            "Microsoft.Web.Infrastructure": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Reflection.Emit": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "System.Security.AccessControl": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Security.Cryptography.Xml": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "System.Security.Permissions": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Security.Principal.Windows": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.Threading.AccessControl": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "System.ValueTuple": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[1.2.10, )"
+            },
+            "structuremap": {
+              "target": "Package",
+              "version": "[2.6.4.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+        "projectName": "EPiServerProtectedAddonProjectWizard",
+        "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+        "packagesPath": "C:\\Users\\HuyHuan\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\HuyHuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.episerver.com/feed/packages.svc/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj": {
+                "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.VSSDK.BuildTools": {
+              "target": "Package",
+              "version": "[16.1.3128, )"
+            },
+            "Microsoft.VisualStudio.SDK": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[16.0.200, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
