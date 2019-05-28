@@ -1,0 +1,2 @@
+# NitecoVsix
+Project templates
