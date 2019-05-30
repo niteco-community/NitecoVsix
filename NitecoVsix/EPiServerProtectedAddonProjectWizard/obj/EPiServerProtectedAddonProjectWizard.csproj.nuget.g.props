@@ -5,7 +5,7 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\HuyHuan\.nuget\packages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\ha.bui\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.1.0</NuGetToolVersion>
   </PropertyGroup>
@@ -16,18 +16,9 @@
     <Import Project="$(NuGetPackageRoot)microsoft.vssdk.buildtools\16.1.3128\build\Microsoft.VSSDK.BuildTools.props" Condition="Exists('$(NuGetPackageRoot)microsoft.vssdk.buildtools\16.1.3128\build\Microsoft.VSSDK.BuildTools.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\HuyHuan\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
-    <PkgMicrosoft_VisualStudio_Threading_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_Threading_Analyzers)' == '' ">C:\Users\HuyHuan\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.168</PkgMicrosoft_VisualStudio_Threading_Analyzers>
-    <PkgMicrosoft_VisualStudio_SDK_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_SDK_Analyzers)' == '' ">C:\Users\HuyHuan\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.36</PkgMicrosoft_VisualStudio_SDK_Analyzers>
-    <PkgMicrosoft_VSSDK_BuildTools Condition=" '$(PkgMicrosoft_VSSDK_BuildTools)' == '' ">C:\Users\HuyHuan\.nuget\packages\microsoft.vssdk.buildtools\16.1.3128</PkgMicrosoft_VSSDK_BuildTools>
-    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\HuyHuan\.nuget\packages\entityframework\6.0.0</PkgEntityFramework>
-    <PkgEPiServer_Framework Condition=" '$(PkgEPiServer_Framework)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.framework\11.12.0</PkgEPiServer_Framework>
-    <PkgEPiServer_ServiceLocation_StructureMap Condition=" '$(PkgEPiServer_ServiceLocation_StructureMap)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.servicelocation.structuremap\1.0.0</PkgEPiServer_ServiceLocation_StructureMap>
-    <PkgEPiServer_Framework_AspNet Condition=" '$(PkgEPiServer_Framework_AspNet)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.framework.aspnet\11.12.0</PkgEPiServer_Framework_AspNet>
-    <PkgEPiServer_CMS_Core Condition=" '$(PkgEPiServer_CMS_Core)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.core\11.12.0</PkgEPiServer_CMS_Core>
-    <PkgEPiServer_CMS_AspNet Condition=" '$(PkgEPiServer_CMS_AspNet)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.aspnet\11.12.0</PkgEPiServer_CMS_AspNet>
-    <PkgEPiServer_CMS_UI_Core Condition=" '$(PkgEPiServer_CMS_UI_Core)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.ui.core\11.20.1</PkgEPiServer_CMS_UI_Core>
-    <PkgEPiServer_CMS_TinyMce Condition=" '$(PkgEPiServer_CMS_TinyMce)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.tinymce\1.0.0</PkgEPiServer_CMS_TinyMce>
-    <PkgEPiServer_CMS Condition=" '$(PkgEPiServer_CMS)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms\11.12.0</PkgEPiServer_CMS>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\ha.bui\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgMicrosoft_VisualStudio_Threading_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_Threading_Analyzers)' == '' ">C:\Users\ha.bui\.nuget\packages\microsoft.visualstudio.threading.analyzers\15.8.168</PkgMicrosoft_VisualStudio_Threading_Analyzers>
+    <PkgMicrosoft_VisualStudio_SDK_Analyzers Condition=" '$(PkgMicrosoft_VisualStudio_SDK_Analyzers)' == '' ">C:\Users\ha.bui\.nuget\packages\microsoft.visualstudio.sdk.analyzers\15.8.36</PkgMicrosoft_VisualStudio_SDK_Analyzers>
+    <PkgMicrosoft_VSSDK_BuildTools Condition=" '$(PkgMicrosoft_VSSDK_BuildTools)' == '' ">C:\Users\ha.bui\.nuget\packages\microsoft.vssdk.buildtools\16.1.3128</PkgMicrosoft_VSSDK_BuildTools>
   </PropertyGroup>
 </Project>

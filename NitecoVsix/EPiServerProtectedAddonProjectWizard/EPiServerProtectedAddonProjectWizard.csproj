@@ -62,9 +62,9 @@
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="16.1.3128" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AddOn.Favorites\AddOn.Favorites.csproj">
-      <Project>{319C5A21-69D6-425B-A0DA-2D3734461439}</Project>
-      <Name>AddOn.Favorites</Name>
+    <ProjectReference Include="..\EPiServerProtectedAddon\EPiServerProtectedAddon.csproj">
+      <Project>{CA364A70-FD0D-4065-874A-1006F5E5899F}</Project>
+      <Name>EPiServerProtectedAddon</Name>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>

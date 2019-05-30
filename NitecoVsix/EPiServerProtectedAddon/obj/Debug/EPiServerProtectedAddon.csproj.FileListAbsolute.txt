@@ -1,0 +1,8 @@
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\bin\Debug\ProjectTemplates\CSharp\1033\EPiServerProtectedAddonProject.zip
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\_EmptyResource.resources
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\EPiServerProtectedAddon.csproj.GenerateResource.cache
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\EPiServerProtectedAddon.csproj.CoreCompileInputs.cache
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\CSharp\1033\EPiServerProtectedAddonProject.zip
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\EPiServerProtectedAddon.dll
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\EPiServerProtectedAddon.pdb
+D:\Projects\NitecoVsix\NitecoVsix\EPiServerProtectedAddon\obj\Debug\EPiServerProtectedAddon.csprojAssemblyReference.cache

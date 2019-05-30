@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>EPiServerProtectedAddon</Name>
+    <Description>EPiServerProtectedAddon</Description>
+    <Icon>EPiServerProtectedAddonProject.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <LanguageTag>csharp</LanguageTag>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>4778bcd8-75ad-4eb4-aca3-04a0b5dfa3f2</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>ProjectTemplate2</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="EPiServerProtectedAddonProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <Folder Name=".nuget">
+        <ProjectItem>NuGet.Config</ProjectItem>
+        <ProjectItem>NuGet.exe</ProjectItem>
+        <ProjectItem>NuGet.targets</ProjectItem>
+      </Folder>
+      <Folder Name="ClientResources">
+        <Folder Name="addon">
+          <Folder Name="command">
+            <ProjectItem>AddFavorite.js</ProjectItem>
+            <ProjectItem>FavoriteCommandProvider.js</ProjectItem>
+            <ProjectItem>RemoveFavorite.js</ProjectItem>
+          </Folder>
+          <Folder Name="component">
+            <ProjectItem>Favorites.js</ProjectItem>
+          </Folder>
+          <ProjectItem>FavoriteModule.js</ProjectItem>
+        </Folder>
+        <Folder Name="css">
+          <Folder Name="images">
+            <ProjectItem>icons.png</ProjectItem>
+          </Folder>
+          <ProjectItem>styles.less</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Components">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoritesComponent.cs">FavoritesComponent.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoritesStore.cs">FavoritesStore.cs</ProjectItem>
+      </Folder>
+      <Folder Name="EmbeddedLangFiles">
+        <ProjectItem>addon_EN.xml</ProjectItem>
+      </Folder>
+      <Folder Name="Models">
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoriteModel.cs">FavoriteModel.cs</ProjectItem>
+      </Folder>
+      <Folder Name="msbuild">
+        <ProjectItem>Main.proj</ProjectItem>
+      </Folder>
+      <ProjectItem>EPiServerProtectedAddonProject.ico</ProjectItem>
+      <ProjectItem>License.txt</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="module.config" OpenInEditor="true">module.config</ProjectItem>
+      <ProjectItem>packages.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

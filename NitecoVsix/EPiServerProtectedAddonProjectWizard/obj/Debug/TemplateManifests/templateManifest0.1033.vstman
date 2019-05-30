@@ -1,0 +1,21 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Project">
+    <RelativePathOnDisk>CSharp\1033\EPiServerProtectedAddonProject</RelativePathOnDisk>
+    <TemplateFileName>EPiServerProtectedAddonProject.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <Name>EPiServerProtectedAddon</Name>
+        <Description>EPiServerProtectedAddon</Description>
+        <Icon>EPiServerProtectedAddonProject.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <LanguageTag>csharp</LanguageTag>
+        <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+        <SortOrder>1000</SortOrder>
+        <TemplateID>4778bcd8-75ad-4eb4-aca3-04a0b5dfa3f2</TemplateID>
+        <CreateNewFolder>true</CreateNewFolder>
+        <DefaultName>ProjectTemplate2</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

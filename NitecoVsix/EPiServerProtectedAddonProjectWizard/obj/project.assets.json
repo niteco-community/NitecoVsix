@@ -2,42 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Castle.Core/4.2.1": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
-      },
-      "Castle.Windsor/4.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "4.2.0"
-        },
-        "frameworkAssemblies": [
-          "System.Runtime.Remoting",
-          "System.Web"
-        ],
-        "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.0.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        }
-      },
       "EnvDTE/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -102,210 +66,6 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.TinyMce": "1.0.0",
-          "EPiServer.CMS.UI": "11.19.2",
-          "EPiServer.ServiceLocation.StructureMap": "1.0.0",
-          "Microsoft.AspNet.Providers.Core": "[2.0.0, 3.0.0)"
-        }
-      },
-      "EPiServer.CMS.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        }
-      },
-      "EPiServer.CMS.Core/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "[4.2.1, 5.0.0)",
-          "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        }
-      },
-      "EPiServer.CMS.TinyMce/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.0.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        }
-      },
-      "EPiServer.Framework/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
-          "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
-          "System.Data.SqlClient": "[4.4.0, 5.0.0)",
-          "System.Reflection.Emit": "[4.3.0, 5.0.0)",
-          "System.Security.Cryptography.Xml": "[4.4.2, 5.0.0)",
-          "System.Security.Permissions": "[4.4.0, 5.0.0)",
-          "System.Security.Principal.Windows": "[4.4.0, 5.0.0)",
-          "System.Threading.AccessControl": "[4.4.0, 5.0.0)",
-          "System.ValueTuple": "[4.5.0, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        }
-      },
-      "EPiServer.Framework.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        }
-      },
-      "EPiServer.ServiceLocation.StructureMap/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.0.0, 12.0.0)",
-          "structuremap-signed": "[3.1.9.463, 4.0.0)",
-          "structuremap.web-signed": "[3.1.6.186, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        }
-      },
-      "log4net/1.2.10": {
-        "type": "package",
-        "compile": {
-          "lib/2.0/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Mvc/5.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.AspNet.WebPages": "[3.2.7, 3.3.0)"
-        },
-        "compile": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Providers.Core/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Providers.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Providers.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net40/System.Web.Razor.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Razor.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages/2.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[2.0.20710, 2.1.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        }
-      },
       "Microsoft.Build/15.8.166": {
         "type": "package",
         "dependencies": {
@@ -361,15 +121,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Tpl.Dataflow/4.5.24": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "Microsoft.VisualStudio.CommandBars/8.0.0": {
@@ -1333,15 +1084,6 @@
           "build/Microsoft.VSSDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -1357,7 +1099,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/_._": {}
         }
       },
       "stdole/7.0.3302": {
@@ -1385,35 +1127,6 @@
           "lib/net46/_._": {}
         }
       },
-      "structuremap/2.6.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap-signed/3.1.9.463": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap.web-signed/3.1.6.186": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Web.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Web.dll": {}
-        }
-      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -1430,19 +1143,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -1518,30 +1218,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
-        }
-      },
-      "System.Data.SqlClient/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
         }
       },
       "System.IO/4.3.0": {
@@ -1631,27 +1307,6 @@
           }
         }
       },
-      "System.Security.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.AccessControl.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1716,84 +1371,6 @@
           }
         }
       },
-      "System.Security.Cryptography.Xml/4.4.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "System.Security",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Cryptography.Xml.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.Xml.dll": {}
-        }
-      },
-      "System.Security.Permissions/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Data",
-          "System.Data.OracleClient",
-          "System.Drawing",
-          "System.Net",
-          "System.Transactions",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Permissions.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Principal.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Principal.Windows.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Threading.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Threading.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Threading.AccessControl.dll": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net461/System.Threading.AccessControl.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Threading.Tasks.Dataflow/4.5.24": {
         "type": "package",
         "compile": {
@@ -1812,16 +1389,13 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.ValueTuple/4.5.0": {
+      "System.ValueTuple/4.3.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/_._": {}
         }
       },
       "VSLangProj/7.0.3301": {
@@ -1930,79 +1504,17 @@
           "lib/net10/_._": {}
         }
       },
-      "AddOn.Favorites/1.0.0": {
+      "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "Castle.Core": "4.2.1",
-          "Castle.Windsor": "4.1.0",
-          "EPiServer.CMS": "11.12.0",
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "Microsoft.AspNet.Mvc": "5.2.7",
-          "Microsoft.AspNet.Razor": "2.0.20710",
-          "Microsoft.AspNet.WebPages": "2.0.20710",
-          "Microsoft.Tpl.Dataflow": "4.5.24",
-          "Microsoft.Web.Infrastructure": "1.0.0",
-          "Newtonsoft.Json": "9.0.1",
-          "System.ComponentModel.Annotations": "4.4.0",
-          "System.Data.SqlClient": "4.4.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Cryptography.Xml": "4.4.2",
-          "System.Security.Permissions": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0",
-          "System.Threading.AccessControl": "4.4.0",
-          "System.ValueTuple": "4.5.0",
-          "log4net": "1.2.10",
-          "structuremap": "2.6.4.1"
-        },
         "compile": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "Castle.Core/4.2.1": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
-      },
-      "Castle.Windsor/4.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "4.2.0"
-        },
-        "frameworkAssemblies": [
-          "System.Runtime.Remoting",
-          "System.Web"
-        ],
-        "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.0.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        }
-      },
       "EnvDTE/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -2067,210 +1579,6 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.TinyMce": "1.0.0",
-          "EPiServer.CMS.UI": "11.19.2",
-          "EPiServer.ServiceLocation.StructureMap": "1.0.0",
-          "Microsoft.AspNet.Providers.Core": "[2.0.0, 3.0.0)"
-        }
-      },
-      "EPiServer.CMS.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        }
-      },
-      "EPiServer.CMS.Core/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "[4.2.1, 5.0.0)",
-          "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        }
-      },
-      "EPiServer.CMS.TinyMce/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.0.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        }
-      },
-      "EPiServer.Framework/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
-          "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
-          "System.Data.SqlClient": "[4.4.0, 5.0.0)",
-          "System.Reflection.Emit": "[4.3.0, 5.0.0)",
-          "System.Security.Cryptography.Xml": "[4.4.2, 5.0.0)",
-          "System.Security.Permissions": "[4.4.0, 5.0.0)",
-          "System.Security.Principal.Windows": "[4.4.0, 5.0.0)",
-          "System.Threading.AccessControl": "[4.4.0, 5.0.0)",
-          "System.ValueTuple": "[4.5.0, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        }
-      },
-      "EPiServer.Framework.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        }
-      },
-      "EPiServer.ServiceLocation.StructureMap/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.0.0, 12.0.0)",
-          "structuremap-signed": "[3.1.9.463, 4.0.0)",
-          "structuremap.web-signed": "[3.1.6.186, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        }
-      },
-      "log4net/1.2.10": {
-        "type": "package",
-        "compile": {
-          "lib/2.0/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Mvc/5.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.AspNet.WebPages": "[3.2.7, 3.3.0)"
-        },
-        "compile": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Providers.Core/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Providers.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Providers.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net40/System.Web.Razor.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Razor.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages/2.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[2.0.20710, 2.1.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        }
-      },
       "Microsoft.Build/15.8.166": {
         "type": "package",
         "dependencies": {
@@ -2326,15 +1634,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Tpl.Dataflow/4.5.24": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "Microsoft.VisualStudio.CommandBars/8.0.0": {
@@ -3298,15 +2597,6 @@
           "build/Microsoft.VSSDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -3322,7 +2612,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/_._": {}
         }
       },
       "stdole/7.0.3302": {
@@ -3350,35 +2640,6 @@
           "lib/net46/_._": {}
         }
       },
-      "structuremap/2.6.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap-signed/3.1.9.463": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap.web-signed/3.1.6.186": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Web.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Web.dll": {}
-        }
-      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -3395,19 +2656,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -3483,20 +2731,6 @@
         },
         "runtime": {
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
-        }
-      },
-      "System.Data.SqlClient/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net461/System.Data.SqlClient.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -3568,21 +2802,6 @@
           "runtimes/win/lib/net45/_._": {}
         }
       },
-      "System.Security.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.AccessControl.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net461/System.Security.AccessControl.dll": {}
-        }
-      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3629,72 +2848,6 @@
           "runtimes/win/lib/net461/_._": {}
         }
       },
-      "System.Security.Cryptography.Xml/4.4.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "System.Security",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Cryptography.Xml.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.Xml.dll": {}
-        }
-      },
-      "System.Security.Permissions/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Data",
-          "System.Data.OracleClient",
-          "System.Drawing",
-          "System.Net",
-          "System.Transactions",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Permissions.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Principal.Windows.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net461/System.Security.Principal.Windows.dll": {}
-        }
-      },
-      "System.Threading.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Threading.AccessControl.dll": {}
-        },
-        "runtime": {
-          "runtimes/win/lib/net461/System.Threading.AccessControl.dll": {}
-        }
-      },
       "System.Threading.Tasks.Dataflow/4.5.24": {
         "type": "package",
         "compile": {
@@ -3713,16 +2866,13 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.ValueTuple/4.5.0": {
+      "System.ValueTuple/4.3.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/_._": {}
         }
       },
       "VSLangProj/7.0.3301": {
@@ -3831,79 +2981,17 @@
           "lib/net10/_._": {}
         }
       },
-      "AddOn.Favorites/1.0.0": {
+      "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "Castle.Core": "4.2.1",
-          "Castle.Windsor": "4.1.0",
-          "EPiServer.CMS": "11.12.0",
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "Microsoft.AspNet.Mvc": "5.2.7",
-          "Microsoft.AspNet.Razor": "2.0.20710",
-          "Microsoft.AspNet.WebPages": "2.0.20710",
-          "Microsoft.Tpl.Dataflow": "4.5.24",
-          "Microsoft.Web.Infrastructure": "1.0.0",
-          "Newtonsoft.Json": "9.0.1",
-          "System.ComponentModel.Annotations": "4.4.0",
-          "System.Data.SqlClient": "4.4.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Cryptography.Xml": "4.4.2",
-          "System.Security.Permissions": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0",
-          "System.Threading.AccessControl": "4.4.0",
-          "System.ValueTuple": "4.5.0",
-          "log4net": "1.2.10",
-          "structuremap": "2.6.4.1"
-        },
         "compile": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "Castle.Core/4.2.1": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
-      },
-      "Castle.Windsor/4.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "4.2.0"
-        },
-        "frameworkAssemblies": [
-          "System.Runtime.Remoting",
-          "System.Web"
-        ],
-        "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.0.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        }
-      },
       "EnvDTE/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -3968,210 +3056,6 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.TinyMce": "1.0.0",
-          "EPiServer.CMS.UI": "11.19.2",
-          "EPiServer.ServiceLocation.StructureMap": "1.0.0",
-          "Microsoft.AspNet.Providers.Core": "[2.0.0, 3.0.0)"
-        }
-      },
-      "EPiServer.CMS.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        }
-      },
-      "EPiServer.CMS.Core/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "[4.2.1, 5.0.0)",
-          "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        }
-      },
-      "EPiServer.CMS.TinyMce/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.0.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        }
-      },
-      "EPiServer.Framework/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
-          "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
-          "System.Data.SqlClient": "[4.4.0, 5.0.0)",
-          "System.Reflection.Emit": "[4.3.0, 5.0.0)",
-          "System.Security.Cryptography.Xml": "[4.4.2, 5.0.0)",
-          "System.Security.Permissions": "[4.4.0, 5.0.0)",
-          "System.Security.Principal.Windows": "[4.4.0, 5.0.0)",
-          "System.Threading.AccessControl": "[4.4.0, 5.0.0)",
-          "System.ValueTuple": "[4.5.0, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        }
-      },
-      "EPiServer.Framework.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        }
-      },
-      "EPiServer.ServiceLocation.StructureMap/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.0.0, 12.0.0)",
-          "structuremap-signed": "[3.1.9.463, 4.0.0)",
-          "structuremap.web-signed": "[3.1.6.186, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        }
-      },
-      "log4net/1.2.10": {
-        "type": "package",
-        "compile": {
-          "lib/2.0/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Mvc/5.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.AspNet.WebPages": "[3.2.7, 3.3.0)"
-        },
-        "compile": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Providers.Core/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Providers.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Providers.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net40/System.Web.Razor.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Razor.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages/2.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[2.0.20710, 2.1.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        }
-      },
       "Microsoft.Build/15.8.166": {
         "type": "package",
         "dependencies": {
@@ -4227,15 +3111,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Tpl.Dataflow/4.5.24": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "Microsoft.VisualStudio.CommandBars/8.0.0": {
@@ -5199,15 +4074,6 @@
           "build/Microsoft.VSSDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -5223,7 +4089,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/_._": {}
         }
       },
       "stdole/7.0.3302": {
@@ -5251,35 +4117,6 @@
           "lib/net46/_._": {}
         }
       },
-      "structuremap/2.6.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap-signed/3.1.9.463": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap.web-signed/3.1.6.186": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Web.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Web.dll": {}
-        }
-      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -5296,19 +4133,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -5386,20 +4210,6 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.Data.SqlClient/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Data.SqlClient.dll": {}
-        }
-      },
       "System.IO/4.3.0": {
         "type": "package",
         "compile": {
@@ -5469,21 +4279,6 @@
           "lib/net45/_._": {}
         }
       },
-      "System.Security.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.AccessControl.dll": {}
-        }
-      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -5530,72 +4325,6 @@
           "lib/net461/_._": {}
         }
       },
-      "System.Security.Cryptography.Xml/4.4.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "System.Security",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Cryptography.Xml.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.Xml.dll": {}
-        }
-      },
-      "System.Security.Permissions/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Data",
-          "System.Data.OracleClient",
-          "System.Drawing",
-          "System.Net",
-          "System.Transactions",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Permissions.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Principal.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Principal.Windows.dll": {}
-        }
-      },
-      "System.Threading.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Threading.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Threading.AccessControl.dll": {}
-        }
-      },
       "System.Threading.Tasks.Dataflow/4.5.24": {
         "type": "package",
         "compile": {
@@ -5614,16 +4343,13 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.ValueTuple/4.5.0": {
+      "System.ValueTuple/4.3.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/_._": {}
         }
       },
       "VSLangProj/7.0.3301": {
@@ -5732,79 +4458,17 @@
           "lib/net10/_._": {}
         }
       },
-      "AddOn.Favorites/1.0.0": {
+      "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "Castle.Core": "4.2.1",
-          "Castle.Windsor": "4.1.0",
-          "EPiServer.CMS": "11.12.0",
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "Microsoft.AspNet.Mvc": "5.2.7",
-          "Microsoft.AspNet.Razor": "2.0.20710",
-          "Microsoft.AspNet.WebPages": "2.0.20710",
-          "Microsoft.Tpl.Dataflow": "4.5.24",
-          "Microsoft.Web.Infrastructure": "1.0.0",
-          "Newtonsoft.Json": "9.0.1",
-          "System.ComponentModel.Annotations": "4.4.0",
-          "System.Data.SqlClient": "4.4.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Cryptography.Xml": "4.4.2",
-          "System.Security.Permissions": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0",
-          "System.Threading.AccessControl": "4.4.0",
-          "System.ValueTuple": "4.5.0",
-          "log4net": "1.2.10",
-          "structuremap": "2.6.4.1"
-        },
         "compile": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         }
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "Castle.Core/4.2.1": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Configuration"
-        ]
-      },
-      "Castle.Windsor/4.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "4.2.0"
-        },
-        "frameworkAssemblies": [
-          "System.Runtime.Remoting",
-          "System.Web"
-        ],
-        "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.0.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        }
-      },
       "EnvDTE/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -5869,210 +4533,6 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.TinyMce": "1.0.0",
-          "EPiServer.CMS.UI": "11.19.2",
-          "EPiServer.ServiceLocation.StructureMap": "1.0.0",
-          "Microsoft.AspNet.Providers.Core": "[2.0.0, 3.0.0)"
-        }
-      },
-      "EPiServer.CMS.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.AspNet.dll": {},
-          "lib/net461/EPiServer.Configuration.dll": {},
-          "lib/net461/EPiServer.ImageLibrary.dll": {},
-          "lib/net461/EPiServer.Web.WebControls.dll": {}
-        }
-      },
-      "EPiServer.CMS.Core/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Castle.Core": "[4.2.1, 5.0.0)",
-          "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Enterprise.dll": {},
-          "lib/net461/EPiServer.LinkAnalyzer.dll": {},
-          "lib/net461/EPiServer.dll": {}
-        }
-      },
-      "EPiServer.CMS.TinyMce/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.0.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.TinyMce.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.UI.dll": {},
-          "lib/net461/EPiServer.Shell.dll": {},
-          "lib/net461/EPiServer.UI.dll": {}
-        }
-      },
-      "EPiServer.Framework/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
-          "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
-          "System.Data.SqlClient": "[4.4.0, 5.0.0)",
-          "System.Reflection.Emit": "[4.3.0, 5.0.0)",
-          "System.Security.Cryptography.Xml": "[4.4.2, 5.0.0)",
-          "System.Security.Permissions": "[4.4.0, 5.0.0)",
-          "System.Security.Principal.Windows": "[4.4.0, 5.0.0)",
-          "System.Threading.AccessControl": "[4.4.0, 5.0.0)",
-          "System.ValueTuple": "[4.5.0, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ApplicationModules.dll": {},
-          "lib/net461/EPiServer.Data.Cache.dll": {},
-          "lib/net461/EPiServer.Data.dll": {},
-          "lib/net461/EPiServer.Events.dll": {},
-          "lib/net461/EPiServer.Framework.dll": {},
-          "lib/net461/EPiServer.Licensing.dll": {}
-        }
-      },
-      "EPiServer.Framework.AspNet/11.12.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
-          "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
-          "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Framework.AspNet.dll": {}
-        }
-      },
-      "EPiServer.ServiceLocation.StructureMap/1.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.Framework": "[11.0.0, 12.0.0)",
-          "structuremap-signed": "[3.1.9.463, 4.0.0)",
-          "structuremap.web-signed": "[3.1.6.186, 4.0.0)"
-        },
-        "compile": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.ServiceLocation.StructureMap.dll": {}
-        }
-      },
-      "log4net/1.2.10": {
-        "type": "package",
-        "compile": {
-          "lib/2.0/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Mvc/5.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.AspNet.WebPages": "[3.2.7, 3.3.0)"
-        },
-        "compile": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Web.Mvc.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Providers.Core/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Providers.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Providers.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Razor/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net40/System.Web.Razor.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Razor.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebPages/2.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[2.0.20710, 2.1.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        },
-        "compile": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Helpers.dll": {},
-          "lib/net40/System.Web.WebPages.Deployment.dll": {},
-          "lib/net40/System.Web.WebPages.Razor.dll": {},
-          "lib/net40/System.Web.WebPages.dll": {}
-        }
-      },
       "Microsoft.Build/15.8.166": {
         "type": "package",
         "dependencies": {
@@ -6128,15 +4588,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Tpl.Dataflow/4.5.24": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "Microsoft.VisualStudio.CommandBars/8.0.0": {
@@ -7100,15 +5551,6 @@
           "build/Microsoft.VSSDK.BuildTools.targets": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
-        }
-      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "compile": {
@@ -7124,7 +5566,7 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/_._": {}
         }
       },
       "stdole/7.0.3302": {
@@ -7152,35 +5594,6 @@
           "lib/net46/_._": {}
         }
       },
-      "structuremap/2.6.4.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap-signed/3.1.9.463": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Net4.dll": {},
-          "lib/net40/StructureMap.dll": {}
-        }
-      },
-      "structuremap.web-signed/3.1.6.186": {
-        "type": "package",
-        "compile": {
-          "lib/net40/StructureMap.Web.dll": {}
-        },
-        "runtime": {
-          "lib/net40/StructureMap.Web.dll": {}
-        }
-      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -7197,19 +5610,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.ComponentModel.Annotations.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.ComponentModel.Composition/4.5.0": {
@@ -7287,20 +5687,6 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.Data.SqlClient/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.Data",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Data.SqlClient.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Data.SqlClient.dll": {}
-        }
-      },
       "System.IO/4.3.0": {
         "type": "package",
         "compile": {
@@ -7370,21 +5756,6 @@
           "lib/net45/_._": {}
         }
       },
-      "System.Security.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.AccessControl.dll": {}
-        }
-      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -7431,72 +5802,6 @@
           "lib/net461/_._": {}
         }
       },
-      "System.Security.Cryptography.Xml/4.4.2": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "System.Security",
-          "System.Xml",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Cryptography.Xml.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Cryptography.Xml.dll": {}
-        }
-      },
-      "System.Security.Permissions/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "System.Data",
-          "System.Data.OracleClient",
-          "System.Drawing",
-          "System.Net",
-          "System.Transactions",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Permissions.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Permissions.dll": {}
-        }
-      },
-      "System.Security.Principal.Windows/4.4.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Security.Principal.Windows.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Security.Principal.Windows.dll": {}
-        }
-      },
-      "System.Threading.AccessControl/4.4.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0"
-        },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
-        "compile": {
-          "ref/net461/System.Threading.AccessControl.dll": {}
-        },
-        "runtime": {
-          "lib/net461/System.Threading.AccessControl.dll": {}
-        }
-      },
       "System.Threading.Tasks.Dataflow/4.5.24": {
         "type": "package",
         "compile": {
@@ -7515,16 +5820,13 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.ValueTuple/4.5.0": {
+      "System.ValueTuple/4.3.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/System.ValueTuple.dll": {}
         },
         "runtime": {
-          "lib/net47/System.ValueTuple.dll": {}
+          "lib/netstandard1.0/_._": {}
         }
       },
       "VSLangProj/7.0.3301": {
@@ -7633,107 +5935,18 @@
           "lib/net10/_._": {}
         }
       },
-      "AddOn.Favorites/1.0.0": {
+      "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "dependencies": {
-          "Castle.Core": "4.2.1",
-          "Castle.Windsor": "4.1.0",
-          "EPiServer.CMS": "11.12.0",
-          "EPiServer.CMS.AspNet": "11.12.0",
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "Microsoft.AspNet.Mvc": "5.2.7",
-          "Microsoft.AspNet.Razor": "2.0.20710",
-          "Microsoft.AspNet.WebPages": "2.0.20710",
-          "Microsoft.Tpl.Dataflow": "4.5.24",
-          "Microsoft.Web.Infrastructure": "1.0.0",
-          "Newtonsoft.Json": "9.0.1",
-          "System.ComponentModel.Annotations": "4.4.0",
-          "System.Data.SqlClient": "4.4.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Security.AccessControl": "4.4.0",
-          "System.Security.Cryptography.Xml": "4.4.2",
-          "System.Security.Permissions": "4.4.0",
-          "System.Security.Principal.Windows": "4.4.0",
-          "System.Threading.AccessControl": "4.4.0",
-          "System.ValueTuple": "4.5.0",
-          "log4net": "1.2.10",
-          "structuremap": "2.6.4.1"
-        },
         "compile": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AddOn.Favorites.dll": {}
+          "bin/placeholder/EPiServerProtectedAddon.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Castle.Core/4.2.1": {
-      "sha512": "XSNA0Gc1Zu33L+8+/3Tqt+aFu8QWS8UenVHZ7RenIP5wJfhoLrA4PnNscpxReeo5aBq8PDoGnV8rNaOzIOUo/w==",
-      "type": "package",
-      "path": "castle.core/4.2.1",
-      "files": [
-        ".nupkg.metadata",
-        "ASL - Apache Software Foundation License.txt",
-        "CHANGELOG.md",
-        "LICENSE",
-        "castle.core.4.2.1.nupkg.sha512",
-        "castle.core.nuspec",
-        "lib/net35/Castle.Core.dll",
-        "lib/net35/Castle.Core.xml",
-        "lib/net40/Castle.Core.dll",
-        "lib/net45/Castle.Core.xml",
-        "lib/netstandard1.3/Castle.Core.dll",
-        "lib/netstandard1.3/Castle.Core.xml",
-        "readme.txt"
-      ]
-    },
-    "Castle.Windsor/4.1.0": {
-      "sha512": "LsVgeKXK7vKyb+YsRKU/rrnFcL11vK92+S4ijpXpEAjS0/j4ssXmqla8ZLO60eT+oTzypMJJxAucN9jZBoHWGA==",
-      "type": "package",
-      "path": "castle.windsor/4.1.0",
-      "files": [
-        ".nupkg.metadata",
-        "ASL - Apache Software Foundation License.txt",
-        "CHANGELOG.md",
-        "LICENSE",
-        "castle.windsor.4.1.0.nupkg.sha512",
-        "castle.windsor.nuspec",
-        "lib/netstandard1.6/Castle.Windsor.dll"
-      ]
-    },
-    "EntityFramework/6.0.0": {
-      "sha512": "y6lX/VMghGBV6TvgQS4Q2WK6kAcOoyD+TQxObN9utd0JsMMdMxyqARxKbvgi7KEIbQ8osZ4ZvImaly7l3NDFDw==",
-      "type": "package",
-      "path": "entityframework/6.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "Content/App.config.transform",
-        "Content/Web.config.transform",
-        "entityframework.6.0.0.nupkg.sha512",
-        "entityframework.nuspec",
-        "lib/net40/EntityFramework.SqlServer.dll",
-        "lib/net40/EntityFramework.SqlServer.xml",
-        "lib/net40/EntityFramework.dll",
-        "lib/net40/EntityFramework.xml",
-        "lib/net45/EntityFramework.SqlServer.dll",
-        "lib/net45/EntityFramework.SqlServer.xml",
-        "lib/net45/EntityFramework.dll",
-        "lib/net45/EntityFramework.xml",
-        "tools/EntityFramework.PowerShell.Utility.dll",
-        "tools/EntityFramework.PowerShell.dll",
-        "tools/EntityFramework.psd1",
-        "tools/EntityFramework.psm1",
-        "tools/about_EntityFramework.help.txt",
-        "tools/init.ps1",
-        "tools/install.ps1",
-        "tools/migrate.exe"
-      ]
-    },
     "EnvDTE/8.0.2": {
       "sha512": "u8Blk4h4kYywOVR5kgApLe1gbEj5BDAhK1k21nYv1gDmmISS3efziVN1j6REoiqROk7XuMX2Kk87Kv0whFqLBA==",
       "type": "package",
@@ -7792,327 +6005,6 @@
         "envdte90a.9.0.3.nupkg.sha512",
         "envdte90a.nuspec",
         "lib/net10/EnvDTE90a.dll"
-      ]
-    },
-    "EPiServer.CMS/11.12.0": {
-      "sha512": "l/8+cKHtYc5OxYENEkzgKMxKZe+9nDpollLdaVnGYmj7fuuGXBAEz9Ue7xKlY0tQq3S6ZbcZOUalRFdQvoiOTg==",
-      "type": "package",
-      "path": "episerver.cms/11.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "content/App_Data/GeoLiteCity.dat",
-        "episerver.cms.11.12.0.nupkg.sha512",
-        "episerver.cms.nuspec",
-        "tools/EPiServer.Cms.Config",
-        "tools/EPiServer.Cms.mdf",
-        "tools/EPiServer.Cms.psm1",
-        "tools/Install.ps1"
-      ]
-    },
-    "EPiServer.CMS.AspNet/11.12.0": {
-      "sha512": "yHcoixjTBIFW8pe7Gnr+bSozrre1osGgH+bCr++p5WKMecTwr07CFtiqH2nH8hJ4Ctx5pgEM6b1/2K2OOpR4KQ==",
-      "type": "package",
-      "path": "episerver.cms.aspnet/11.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.cms.aspnet.11.12.0.nupkg.sha512",
-        "episerver.cms.aspnet.nuspec",
-        "lib/net461/EPiServer.Cms.AspNet.dll",
-        "lib/net461/EPiServer.Cms.AspNet.xml",
-        "lib/net461/EPiServer.Configuration.dll",
-        "lib/net461/EPiServer.Configuration.xml",
-        "lib/net461/EPiServer.ImageLibrary.dll",
-        "lib/net461/EPiServer.Web.WebControls.dll",
-        "lib/net461/EPiServer.Web.WebControls.xml",
-        "tools/AssemblyRedirects.ps1",
-        "tools/Install.ps1",
-        "tools/MirroringService/EPiServer.MirroringService.dll",
-        "tools/epiupdates/config/11.0.0.0.config",
-        "tools/epiupdates/config/7.6.0.0.config",
-        "tools/epiupdates/config/8.0.0.0.config",
-        "tools/epiupdates/config/9.0.0.0.config",
-        "tools/epiupdates/config/9.0.3.0.config",
-        "tools/webconfig-baseline.config"
-      ]
-    },
-    "EPiServer.CMS.Core/11.12.0": {
-      "sha512": "FOd3FER6jqaw7h5L0zc6YNg1maxQ7To7EJDCioRLyjK6nb7XPHMwkSSGMHcUMFskUWHkG9pesXP4R/SbRHufgA==",
-      "type": "package",
-      "path": "episerver.cms.core/11.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.cms.core.11.12.0.nupkg.sha512",
-        "episerver.cms.core.nuspec",
-        "lib/net461/EPiServer.Enterprise.dll",
-        "lib/net461/EPiServer.Enterprise.xml",
-        "lib/net461/EPiServer.LinkAnalyzer.dll",
-        "lib/net461/EPiServer.dll",
-        "lib/net461/EPiServer.xml",
-        "lib/netstandard2.0/EPiServer.Enterprise.dll",
-        "lib/netstandard2.0/EPiServer.Enterprise.xml",
-        "lib/netstandard2.0/EPiServer.LinkAnalyzer.dll",
-        "lib/netstandard2.0/EPiServer.dll",
-        "lib/netstandard2.0/EPiServer.xml",
-        "tools/EPiServer.Cms.Core.sql",
-        "tools/Install.ps1",
-        "tools/epiupdates/sql/10.0.0.sql",
-        "tools/epiupdates/sql/10.1.0.sql",
-        "tools/epiupdates/sql/10.10.0.sql",
-        "tools/epiupdates/sql/10.2.0.sql",
-        "tools/epiupdates/sql/10.3.0.sql",
-        "tools/epiupdates/sql/10.3.2.sql",
-        "tools/epiupdates/sql/10.4.1.sql",
-        "tools/epiupdates/sql/10.5.0.sql",
-        "tools/epiupdates/sql/10.6.0.sql",
-        "tools/epiupdates/sql/10.7.0.sql",
-        "tools/epiupdates/sql/10.8.0.sql",
-        "tools/epiupdates/sql/10.9.0.sql",
-        "tools/epiupdates/sql/11.0.0.sql",
-        "tools/epiupdates/sql/11.10.0.sql",
-        "tools/epiupdates/sql/11.10.7.sql",
-        "tools/epiupdates/sql/11.12.0.sql",
-        "tools/epiupdates/sql/11.2.0.sql",
-        "tools/epiupdates/sql/11.3.3.sql",
-        "tools/epiupdates/sql/11.3.4.sql",
-        "tools/epiupdates/sql/11.5.4.sql",
-        "tools/epiupdates/sql/11.6.0.sql",
-        "tools/epiupdates/sql/11.7.0.sql",
-        "tools/epiupdates/sql/11.8.1.sql",
-        "tools/epiupdates/sql/7.10.0.sql",
-        "tools/epiupdates/sql/7.11.0.sql",
-        "tools/epiupdates/sql/7.12.0.sql",
-        "tools/epiupdates/sql/7.13.0.sql",
-        "tools/epiupdates/sql/7.14.0.sql",
-        "tools/epiupdates/sql/7.16.0.sql",
-        "tools/epiupdates/sql/7.19.0.sql",
-        "tools/epiupdates/sql/7.19.1.sql",
-        "tools/epiupdates/sql/7.8.0.sql",
-        "tools/epiupdates/sql/8.0.0.sql",
-        "tools/epiupdates/sql/8.10.0.sql",
-        "tools/epiupdates/sql/8.4.0.sql",
-        "tools/epiupdates/sql/8.6.0.sql",
-        "tools/epiupdates/sql/8.7.0.sql",
-        "tools/epiupdates/sql/8.9.0.sql",
-        "tools/epiupdates/sql/9.0.0.sql",
-        "tools/epiupdates/sql/9.0.1.sql",
-        "tools/epiupdates/sql/9.0.2.sql",
-        "tools/epiupdates/sql/9.1.0.sql",
-        "tools/epiupdates/sql/9.1.1.sql",
-        "tools/epiupdates/sql/9.2.0.sql",
-        "tools/epiupdates/sql/9.3.0.sql",
-        "tools/epiupdates/sql/9.4.0.sql",
-        "tools/epiupdates/sql/9.5.0.sql",
-        "tools/epiupdates/sql/9.6.2.sql",
-        "tools/epiupdates/sql/9.7.0.sql",
-        "tools/epiupdates/sql/9.8.0.sql",
-        "tools/epiupdates/sql/9.8.1.sql",
-        "tools/epiupdates/sql/9.8.2.sql",
-        "tools/epiupdates/sql/9.8.3.sql"
-      ]
-    },
-    "EPiServer.CMS.TinyMce/1.0.0": {
-      "sha512": "M4gX1EJ/qQ3MzN+8sLqfd09/rdvDrh2KGhtHxSC+HrayrU9lURCYkWTLGDe2W5Ss9kYWxHY/9fpMmcmM7dFZOQ==",
-      "type": "package",
-      "path": "episerver.cms.tinymce/1.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "content/modules/_protected/EPiServer.Cms.TinyMce/EPiServer.Cms.TinyMce.zip",
-        "content/modules/_protected/EPiServer.Cms.TinyMce/web.config",
-        "content/web.config.install.xdt",
-        "content/web.config.uninstall.xdt",
-        "episerver.cms.tinymce.1.0.0.nupkg.sha512",
-        "episerver.cms.tinymce.nuspec",
-        "lib/net461/EPiServer.Cms.TinyMce.dll",
-        "lib/net461/EPiServer.Cms.TinyMce.xml",
-        "tools/Install.ps1",
-        "tools/Update-AssemblyBinding.psm1"
-      ]
-    },
-    "EPiServer.CMS.UI/11.20.1": {
-      "sha512": "4uWKT+Vpyl7jV88BeQN1sw1NqWgwTeJm275wntry8JaNI6JKkpcxnFuCwaNbX6LkeJxgesUTPelQcnQK7JgN5w==",
-      "type": "package",
-      "path": "episerver.cms.ui/11.20.1",
-      "files": [
-        ".nupkg.metadata",
-        "content/modules/_protected/CMS/CMS.zip",
-        "content/modules/_protected/CMS/web.config",
-        "content/modules/_protected/Shell/Shell.zip",
-        "content/modules/_protected/Shell/web.config",
-        "episerver.cms.ui.11.20.1.nupkg.sha512",
-        "episerver.cms.ui.nuspec",
-        "readme.txt"
-      ]
-    },
-    "EPiServer.CMS.UI.Core/11.20.1": {
-      "sha512": "pfjpPz0Rc4DDtdhARnOtyPuR9bCQBuQO0dmtIjlG0cOSBDRKmfY7i+72h1mSPMqjK8mS0nfHeK7lfFAoj3dTIw==",
-      "type": "package",
-      "path": "episerver.cms.ui.core/11.20.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "content/net461/web.config.install.xdt",
-        "content/net461/web.config.uninstall.xdt",
-        "episerver.cms.ui.core.11.20.1.nupkg.sha512",
-        "episerver.cms.ui.core.nuspec",
-        "lib/net461/EPiServer.Cms.Shell.UI.dll",
-        "lib/net461/EPiServer.Shell.UI.dll",
-        "lib/net461/EPiServer.Shell.dll",
-        "lib/net461/EPiServer.UI.dll",
-        "readme.txt",
-        "tools/Get-ModulesRepositoryPath.psm1",
-        "tools/Get-ProtectedModulesPath.psm1",
-        "tools/Get-WebConfig.psm1",
-        "tools/Install.ps1",
-        "tools/Remove-AddOnFolder.psm1",
-        "tools/Remove-Assembly.psm1",
-        "tools/Remove-RepositoryModule.psm1",
-        "tools/Update-AssemblyBinding.psm1",
-        "tools/Update-PackagesConfig.psm1"
-      ]
-    },
-    "EPiServer.Framework/11.12.0": {
-      "sha512": "FUVKyTisJuw6R7DXwZyhXJUNHkP/7n1q1nZQzZDin+YwedNMSTCNTn4yn5hoe6UGKsMHTxUIPR7UBcccLcQWuw==",
-      "type": "package",
-      "path": "episerver.framework/11.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.framework.11.12.0.nupkg.sha512",
-        "episerver.framework.nuspec",
-        "lib/net461/EPiServer.ApplicationModules.dll",
-        "lib/net461/EPiServer.Data.Cache.dll",
-        "lib/net461/EPiServer.Data.dll",
-        "lib/net461/EPiServer.Data.xml",
-        "lib/net461/EPiServer.Events.dll",
-        "lib/net461/EPiServer.Events.xml",
-        "lib/net461/EPiServer.Framework.dll",
-        "lib/net461/EPiServer.Framework.xml",
-        "lib/net461/EPiServer.Licensing.dll",
-        "lib/netstandard2.0/EPiServer.ApplicationModules.dll",
-        "lib/netstandard2.0/EPiServer.Data.Cache.dll",
-        "lib/netstandard2.0/EPiServer.Data.dll",
-        "lib/netstandard2.0/EPiServer.Data.xml",
-        "lib/netstandard2.0/EPiServer.Events.dll",
-        "lib/netstandard2.0/EPiServer.Events.xml",
-        "lib/netstandard2.0/EPiServer.Framework.dll",
-        "lib/netstandard2.0/EPiServer.Framework.xml",
-        "lib/netstandard2.0/EPiServer.Licensing.dll",
-        "tools/ConvertDatabaseToUtc.psm1",
-        "tools/Install.ps1",
-        "tools/Upgrade.psm1",
-        "tools/epideploy.exe",
-        "tools/init.ps1"
-      ]
-    },
-    "EPiServer.Framework.AspNet/11.12.0": {
-      "sha512": "MP3XnTmbtXu/fZEWso6KsbigfNdonUsIiDt7uznuDaisO44QBcyi3LNTaAWqW/3TKg2tIVS76CY5k7yt/j9Tgw==",
-      "type": "package",
-      "path": "episerver.framework.aspnet/11.12.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.framework.aspnet.11.12.0.nupkg.sha512",
-        "episerver.framework.aspnet.nuspec",
-        "lib/net461/EPiServer.Framework.AspNet.dll",
-        "lib/net461/EPiServer.Framework.AspNet.xml",
-        "tools/AssemblyRedirects.ps1",
-        "tools/Install.ps1",
-        "tools/epiupdates/config/11.0.0.0.config"
-      ]
-    },
-    "EPiServer.ServiceLocation.StructureMap/1.0.0": {
-      "sha512": "qmvcLMsONVs1vUQ9XDEJUcpIjNqLJGx18q531nQ1RuYq5HDkHsHAJ6iRvd/TZ+XqElHSJM4xmjCul2xF6wE53g==",
-      "type": "package",
-      "path": "episerver.servicelocation.structuremap/1.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.servicelocation.structuremap.1.0.0.nupkg.sha512",
-        "episerver.servicelocation.structuremap.nuspec",
-        "lib/net461/EPiServer.ServiceLocation.StructureMap.dll",
-        "tools/Install.ps1"
-      ]
-    },
-    "log4net/1.2.10": {
-      "sha512": "yP7PCpxPt5cB9yiRAvCwyW5YRqXV4jM4tpVLnm/ls2nJt786l5srbSdm5xIEVMXz/kOYqLKP177Gyqey1wdP/A==",
-      "type": "package",
-      "path": "log4net/1.2.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/1.0/log4net.dll",
-        "lib/1.0/log4net.xml",
-        "lib/1.1/log4net.dll",
-        "lib/1.1/log4net.xml",
-        "lib/2.0/log4net.dll",
-        "lib/2.0/log4net.xml",
-        "log4net.1.2.10.nupkg.sha512",
-        "log4net.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Mvc/5.2.7": {
-      "sha512": "m3hUsn48k6Qb5El9A8naTwGTLCdSQKGSpGweqIfiVKltGJzAJJxuXvhhaQQtLCGg3i5V88iGjz0JG72/tlFKlg==",
-      "type": "package",
-      "path": "microsoft.aspnet.mvc/5.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/Web.config.install.xdt",
-        "Content/Web.config.uninstall.xdt",
-        "lib/net45/System.Web.Mvc.dll",
-        "lib/net45/System.Web.Mvc.xml",
-        "microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
-        "microsoft.aspnet.mvc.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Providers.Core/2.0.0": {
-      "sha512": "JMk31PExMANVDc04aSUyIlcL3pkFVyNg/dDn+ZZzmhZ2CBctI90BWQH1L0zXgD61ZWW5r4ybInV362sRKWIC+A==",
-      "type": "package",
-      "path": "microsoft.aspnet.providers.core/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ReadMe.txt",
-        "lib/net40/System.Web.Providers.dll",
-        "lib/net40/System.Web.Providers.xml",
-        "microsoft.aspnet.providers.core.2.0.0.nupkg.sha512",
-        "microsoft.aspnet.providers.core.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Razor/2.0.20710": {
-      "sha512": "JkaLdzjXnjcd8JAaAAtahMtqORdBfX2pOlVdv7khq2hKBLqjdP+5q2LVLmbLecFGxoW9inDNjZKvwdVuiwFbZg==",
-      "type": "package",
-      "path": "microsoft.aspnet.razor/2.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Web.Razor.dll",
-        "lib/net40/System.Web.Razor.xml",
-        "microsoft.aspnet.razor.2.0.20710.nupkg.sha512",
-        "microsoft.aspnet.razor.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebPages/2.0.20710": {
-      "sha512": "bpWbVKW0RpM/XtTwZL7pjhuVqpaB/cHutR7W4YXLIXFMHHXilqzVxpFmyzwoIZVO1xmSdoelbDRBncIA5D24EA==",
-      "type": "package",
-      "path": "microsoft.aspnet.webpages/2.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Web.Helpers.dll",
-        "lib/net40/System.Web.Helpers.xml",
-        "lib/net40/System.Web.WebPages.Deployment.dll",
-        "lib/net40/System.Web.WebPages.Deployment.xml",
-        "lib/net40/System.Web.WebPages.Razor.dll",
-        "lib/net40/System.Web.WebPages.Razor.xml",
-        "lib/net40/System.Web.WebPages.dll",
-        "lib/net40/System.Web.WebPages.xml",
-        "microsoft.aspnet.webpages.2.0.20710.nupkg.sha512",
-        "microsoft.aspnet.webpages.nuspec"
       ]
     },
     "Microsoft.Build/15.8.166": {
@@ -8187,22 +6079,6 @@
         "microsoft.build.utilities.core.15.8.166.nupkg.sha512",
         "microsoft.build.utilities.core.nuspec",
         "notices/THIRDPARTYNOTICES.txt"
-      ]
-    },
-    "Microsoft.Tpl.Dataflow/4.5.24": {
-      "sha512": "6BE4Vu74+dkv5AkJd+UxW1sFMepMZOVlUoMZDUKqhc4Bf7pe7yySzCj6QrowUZbCqcDPwOiQsAgz3nXiLQSyMw==",
-      "type": "package",
-      "path": "microsoft.tpl.dataflow/4.5.24",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License-Stable.rtf",
-        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Dataflow.dll",
-        "lib/portable-net45+win8+wp8+wpa81/system.threading.tasks.dataflow.xml",
-        "lib/portable-net45+win8+wpa81/System.Threading.Tasks.Dataflow.dll",
-        "lib/portable-net45+win8+wpa81/system.threading.tasks.dataflow.xml",
-        "microsoft.tpl.dataflow.4.5.24.nupkg.sha512",
-        "microsoft.tpl.dataflow.nuspec"
       ]
     },
     "Microsoft.VisualStudio.CommandBars/8.0.0": {
@@ -9501,17 +7377,6 @@
         "tools/vssdk/schemas/VSIXManifestSchema.xsd"
       ]
     },
-    "Microsoft.Web.Infrastructure/1.0.0": {
-      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
-      "type": "package",
-      "path": "microsoft.web.infrastructure/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net40/Microsoft.Web.Infrastructure.dll",
-        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
-        "microsoft.web.infrastructure.nuspec"
-      ]
-    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
@@ -9556,7 +7421,6 @@
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -9695,61 +7559,6 @@
         "streamjsonrpc.nuspec"
       ]
     },
-    "structuremap/2.6.4.1": {
-      "sha512": "pot5rWPLwM6DAxDPC1L1AyO/A64kAIp3EMpjlrELdKIx8odiRtqfWovEtDIQSdWerbWoD1cTt1aj9s0mpiA6bQ==",
-      "type": "package",
-      "path": "structuremap/2.6.4.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/StructureMap.XML",
-        "lib/net40/StructureMap.dll",
-        "lib/net40/StructureMap.pdb",
-        "structuremap.2.6.4.1.nupkg.sha512",
-        "structuremap.nuspec"
-      ]
-    },
-    "structuremap-signed/3.1.9.463": {
-      "sha512": "jzLJt3O4XC5R91wfF7BehBVmmQkoL+VheYu93Stq97FrQ2ik7SPgciW69JGmStf8BPiHdILHpLCVDR5aeovAaQ==",
-      "type": "package",
-      "path": "structuremap-signed/3.1.9.463",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/StructureMap.Net4.dll",
-        "lib/net40/StructureMap.Net4.pdb",
-        "lib/net40/StructureMap.dll",
-        "lib/net40/StructureMap.pdb",
-        "lib/net40/StructureMap.xml",
-        "lib/portable-net45+win+wp81/StructureMap.dll",
-        "lib/portable-net45+win+wp81/StructureMap.pdb",
-        "lib/portable-net45+win+wp81/StructureMap.xml",
-        "lib/portable-win+net40+wp8/StructureMap.dll",
-        "lib/portable-win+net40+wp8/StructureMap.pdb",
-        "lib/portable-win+net40+wp8/StructureMap.xml",
-        "lib/wp80/StructureMap.dll",
-        "lib/wp80/StructureMap.pdb",
-        "lib/wp80/StructureMap.xml",
-        "lib/wp81/StructureMap.dll",
-        "lib/wp81/StructureMap.pdb",
-        "lib/wp81/StructureMap.xml",
-        "structuremap-signed.3.1.9.463.nupkg.sha512",
-        "structuremap-signed.nuspec"
-      ]
-    },
-    "structuremap.web-signed/3.1.6.186": {
-      "sha512": "mjUFpWfQYvK9X6Gve7CKbKnELNzIeqrXATqY2dbir06Tnj4pzvwW3E9XgmBBBG7qJHNzR5yKQ9DSm4amufY0Ug==",
-      "type": "package",
-      "path": "structuremap.web-signed/3.1.6.186",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/StructureMap.Web.dll",
-        "lib/net40/StructureMap.Web.pdb",
-        "structuremap.web-signed.3.1.6.186.nupkg.sha512",
-        "structuremap.web-signed.nuspec"
-      ]
-    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -9798,92 +7607,6 @@
         "lib/portable-net45+win8+wp8+wpa81/System.Collections.Immutable.xml",
         "system.collections.immutable.1.5.0.nupkg.sha512",
         "system.collections.immutable.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.ComponentModel.Annotations/4.4.0": {
-      "sha512": "29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
-      "type": "package",
-      "path": "system.componentmodel.annotations/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net461/System.ComponentModel.Annotations.dll",
-        "lib/netcore50/System.ComponentModel.Annotations.dll",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "lib/portable-net45+win8/_._",
-        "lib/win8/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net461/System.ComponentModel.Annotations.dll",
-        "ref/net461/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/System.ComponentModel.Annotations.dll",
-        "ref/netcore50/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/de/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/es/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/fr/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/it/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ja/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ko/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.1/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.3/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.3/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.dll",
-        "ref/netstandard1.4/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/de/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/es/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/fr/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/it/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ja/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ko/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
-        "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
-        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
-        "ref/portable-net45+win8/_._",
-        "ref/win8/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.4.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -10008,74 +7731,6 @@
         "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll",
         "system.composition.typedparts.1.0.31.nupkg.sha512",
         "system.composition.typedparts.nuspec"
-      ]
-    },
-    "System.Data.SqlClient/4.4.0": {
-      "sha512": "fxb9ghn1k1Ua7FFdlvtiBOD4/PsQvD/fk2KnhS+FK7VC6OggEx6P+lP1P0+KMb5V2dqS1+FbR7HCenoqzJMNIA==",
-      "type": "package",
-      "path": "system.data.sqlclient/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net451/System.Data.SqlClient.dll",
-        "lib/net46/System.Data.SqlClient.dll",
-        "lib/net461/System.Data.SqlClient.dll",
-        "lib/netstandard1.2/System.Data.SqlClient.dll",
-        "lib/netstandard1.3/System.Data.SqlClient.dll",
-        "lib/netstandard2.0/System.Data.SqlClient.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net451/System.Data.SqlClient.dll",
-        "ref/net46/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.dll",
-        "ref/net461/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/System.Data.SqlClient.dll",
-        "ref/netstandard1.2/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.2/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/System.Data.SqlClient.dll",
-        "ref/netstandard1.3/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/de/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/es/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/fr/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/it/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ja/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ko/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/ru/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hans/System.Data.SqlClient.xml",
-        "ref/netstandard1.3/zh-hant/System.Data.SqlClient.xml",
-        "ref/netstandard2.0/System.Data.SqlClient.dll",
-        "ref/netstandard2.0/System.Data.SqlClient.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/unix/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net451/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net46/System.Data.SqlClient.dll",
-        "runtimes/win/lib/net461/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
-        "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
-        "system.data.sqlclient.4.4.0.nupkg.sha512",
-        "system.data.sqlclient.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.IO/4.3.0": {
@@ -10402,46 +8057,6 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
-    "System.Security.AccessControl/4.4.0": {
-      "sha512": "2NRFPX/V81ucKQmqNgGBZrKGH/5ejsvivSGMRum0SMgPnJxwhuNkzVS1+7gC3R2X0f57CtwrPrXPPSe6nOp82g==",
-      "type": "package",
-      "path": "system.security.accesscontrol/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.AccessControl.dll",
-        "lib/net461/System.Security.AccessControl.dll",
-        "lib/netstandard1.3/System.Security.AccessControl.dll",
-        "lib/netstandard2.0/System.Security.AccessControl.dll",
-        "ref/net46/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.dll",
-        "ref/net461/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/System.Security.AccessControl.dll",
-        "ref/netstandard1.3/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
-        "ref/netstandard2.0/System.Security.AccessControl.dll",
-        "ref/netstandard2.0/System.Security.AccessControl.xml",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
-        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
-        "system.security.accesscontrol.4.4.0.nupkg.sha512",
-        "system.security.accesscontrol.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Security.Cryptography.Algorithms/4.3.0": {
       "sha512": "W1kd2Y8mYSCgc3ULTAZ0hOP2dSdG5YauTb1089T0/kRcN2MpSAW1izOFROrJgxSlMn3ArsgHXagigyi+ibhevg==",
       "type": "package",
@@ -10604,126 +8219,6 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
-    "System.Security.Cryptography.Xml/4.4.2": {
-      "sha512": "1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
-      "type": "package",
-      "path": "system.security.cryptography.xml/4.4.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Security.Cryptography.Xml.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
-        "ref/net461/System.Security.Cryptography.Xml.dll",
-        "ref/net461/System.Security.Cryptography.Xml.xml",
-        "ref/netstandard2.0/System.Security.Cryptography.Xml.dll",
-        "ref/netstandard2.0/System.Security.Cryptography.Xml.xml",
-        "system.security.cryptography.xml.4.4.2.nupkg.sha512",
-        "system.security.cryptography.xml.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Security.Permissions/4.4.0": {
-      "sha512": "ArK+Kh7BSqWhspqO3qe8R25MeUzBm3ZdWbYiN6Q0kLO3nR4dLeZzS03C0QUI/470w7pGRm7lUZ9sjfDQKJjRcQ==",
-      "type": "package",
-      "path": "system.security.permissions/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Security.Permissions.dll",
-        "lib/netstandard2.0/System.Security.Permissions.dll",
-        "ref/net461/System.Security.Permissions.dll",
-        "ref/netstandard2.0/System.Security.Permissions.dll",
-        "ref/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.4.4.0.nupkg.sha512",
-        "system.security.permissions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Security.Principal.Windows/4.4.0": {
-      "sha512": "pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==",
-      "type": "package",
-      "path": "system.security.principal.windows/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Security.Principal.Windows.dll",
-        "lib/net461/System.Security.Principal.Windows.dll",
-        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
-        "ref/net46/System.Security.Principal.Windows.dll",
-        "ref/net461/System.Security.Principal.Windows.dll",
-        "ref/net461/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
-        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
-        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
-        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
-        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
-        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
-        "system.security.principal.windows.4.4.0.nupkg.sha512",
-        "system.security.principal.windows.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Threading.AccessControl/4.4.0": {
-      "sha512": "CbywegComLpet8Q/Cfre7qmu5NybfN8d6iyTuZRC/xqOILs1Jz2ao8erOyC1XjuIG/TDQEZATwkD0/4DWeikGw==",
-      "type": "package",
-      "path": "system.threading.accesscontrol/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net46/System.Threading.AccessControl.dll",
-        "lib/net461/System.Threading.AccessControl.dll",
-        "lib/netstandard1.3/System.Threading.AccessControl.dll",
-        "lib/netstandard2.0/System.Threading.AccessControl.dll",
-        "ref/net46/System.Threading.AccessControl.dll",
-        "ref/net461/System.Threading.AccessControl.dll",
-        "ref/net461/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/System.Threading.AccessControl.dll",
-        "ref/netstandard1.3/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/de/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/es/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/fr/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/it/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/ja/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/ko/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/ru/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.AccessControl.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.AccessControl.xml",
-        "ref/netstandard2.0/System.Threading.AccessControl.dll",
-        "ref/netstandard2.0/System.Threading.AccessControl.xml",
-        "runtimes/win/lib/net46/System.Threading.AccessControl.dll",
-        "runtimes/win/lib/net461/System.Threading.AccessControl.dll",
-        "runtimes/win/lib/netstandard1.3/System.Threading.AccessControl.dll",
-        "runtimes/win/lib/netstandard2.0/System.Threading.AccessControl.dll",
-        "system.threading.accesscontrol.4.4.0.nupkg.sha512",
-        "system.threading.accesscontrol.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Threading.Tasks.Dataflow/4.5.24": {
       "sha512": "xE/T1IX6nUYwNvoh8F2xFwHtKlFf/fhAAUpdNmSQINnMT7CL/cEWvvQYEXqZ2cfEtRpucp50ZhoLWC3MtPMfYg==",
       "type": "package",
@@ -10757,48 +8252,21 @@
         "system.threading.tasks.extensions.nuspec"
       ]
     },
-    "System.ValueTuple/4.5.0": {
-      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+    "System.ValueTuple/4.3.0": {
+      "sha512": "cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
       "type": "package",
-      "path": "system.valuetuple/4.5.0",
+      "path": "system.valuetuple/4.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net461/System.ValueTuple.dll",
-        "lib/net461/System.ValueTuple.xml",
-        "lib/net47/System.ValueTuple.dll",
-        "lib/net47/System.ValueTuple.xml",
-        "lib/netcoreapp2.0/_._",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/.xml",
         "lib/netstandard1.0/System.ValueTuple.dll",
-        "lib/netstandard1.0/System.ValueTuple.xml",
-        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/.xml",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.dll",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard2.0/_._",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.5.0.nupkg.sha512",
-        "system.valuetuple.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.valuetuple.4.3.0.nupkg.sha512",
+        "system.valuetuple.nuspec"
       ]
     },
     "VSLangProj/7.0.3301": {
@@ -10921,34 +8389,35 @@
         "vslangproj90.nuspec"
       ]
     },
-    "AddOn.Favorites/1.0.0": {
+    "EPiServerProtectedAddon/1.0.0": {
       "type": "project",
-      "path": "../AddOn.Favorites/AddOn.Favorites.csproj",
-      "msbuildProject": "../AddOn.Favorites/AddOn.Favorites.csproj"
+      "path": "../EPiServerProtectedAddon/EPiServerProtectedAddon.csproj",
+      "msbuildProject": "../EPiServerProtectedAddon/EPiServerProtectedAddon.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "AddOn.Favorites >= 1.0.0",
+      "EPiServerProtectedAddon >= 1.0.0",
       "Microsoft.VSSDK.BuildTools >= 16.1.3128",
       "Microsoft.VisualStudio.SDK >= 16.0.200"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HuyHuan\\.nuget\\packages\\": {}
+    "C:\\Users\\ha.bui\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+      "projectUniqueName": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
       "projectName": "EPiServerProtectedAddonProjectWizard",
-      "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
-      "packagesPath": "C:\\Users\\HuyHuan\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
+      "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+      "packagesPath": "C:\\Users\\ha.bui\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\HuyHuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
+        "C:\\Users\\ha.bui\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10956,14 +8425,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://hephaestus.maginus.com/nuget": {},
         "http://nuget.episerver.com/feed/packages.svc/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net472": {
           "projectReferences": {
-            "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj": {
-              "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\AddOn.Favorites\\AddOn.Favorites.csproj"
+            "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
+              "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj"
             }
           }
         }
@@ -10995,59 +8465,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "EPiServer.CMS.TinyMce 1.0.0 depends on EPiServer.CMS.UI.Core (>= 11.0.0 && < 12.0.0) but EPiServer.CMS.UI.Core 11.0.0 was not found. An approximate best match of EPiServer.CMS.UI.Core 11.1.0 was resolved.",
-      "libraryId": "EPiServer.CMS.UI.Core",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "EPiServer.ServiceLocation.StructureMap 1.0.0 depends on EPiServer.Framework (>= 11.0.0 && < 12.0.0) but EPiServer.Framework 11.0.0 was not found. An approximate best match of EPiServer.Framework 11.1.0 was resolved.",
-      "libraryId": "EPiServer.Framework",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.AspNet.WebPages from 3.2.7 to 2.0.20710.0. Reference the package directly from the project to select a different version. \r\n EPiServerProtectedAddonProjectWizard -> AddOn.Favorites -> Microsoft.AspNet.Mvc 5.2.7 -> Microsoft.AspNet.WebPages (>= 3.2.7 && < 3.3.0) \r\n EPiServerProtectedAddonProjectWizard -> AddOn.Favorites -> Microsoft.AspNet.WebPages (>= 2.0.20710)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.AspNet.Razor from 3.2.7 to 2.0.20710.0. Reference the package directly from the project to select a different version. \r\n EPiServerProtectedAddonProjectWizard -> AddOn.Favorites -> Microsoft.AspNet.Mvc 5.2.7 -> Microsoft.AspNet.Razor (>= 3.2.7 && < 3.3.0) \r\n EPiServerProtectedAddonProjectWizard -> AddOn.Favorites -> Microsoft.AspNet.Razor (>= 2.0.20710)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    }
-  ]
+  }
 }
