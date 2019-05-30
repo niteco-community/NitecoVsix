@@ -1,4 +1,4 @@
-﻿using AddOn.Favorites.Models;
+﻿using $projectname$.Models;
 using EPiServer.Core;
 using EPiServer.Data.Dynamic;
 using EPiServer.Shell;

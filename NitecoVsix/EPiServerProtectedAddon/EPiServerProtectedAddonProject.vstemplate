@@ -53,9 +53,10 @@
         <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoriteModel.cs">FavoriteModel.cs</ProjectItem>
       </Folder>
       <Folder Name="msbuild">
-        <ProjectItem>Main.proj</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Main.proj" OpenInEditor="true">Main.proj</ProjectItem>
       </Folder>
       <ProjectItem>EPiServerProtectedAddonProject.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EPiServerProtectedAddon.nuspec" OpenInEditor="true">EPiServerProtectedAddon.nuspec</ProjectItem>
       <ProjectItem>License.txt</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="module.config" OpenInEditor="true">module.config</ProjectItem>
       <ProjectItem>packages.config</ProjectItem>

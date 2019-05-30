@@ -46,10 +46,10 @@
 
   <PropertyGroup>
     <ProjectDir Condition="$(ProjectDir) == ''">$(MSBuildProjectDirectory)\..\</ProjectDir>
-    <NuGetExe>$(ProjectDir)\.nuget\NuGet.exe</NuGetExe>
-    <TmpOutDir>$(ProjectDir)\tmp</TmpOutDir>
-    <PackageOutDir>$(SolutionDir)\LocalPackages</PackageOutDir>
-    <NuspecFile>$(ProjectDir)\AddOn.Favorites.nuspec</NuspecFile>
+    <NuGetExe>$(ProjectDir).nuget\NuGet.exe</NuGetExe>
+    <TmpOutDir>$(ProjectDir)tmp</TmpOutDir>
+    <PackageOutDir>$(SolutionDir)LocalPackages</PackageOutDir>
+    <NuspecFile>$(ProjectDir)EPiServerProtectedAddon.nuspec</NuspecFile>
   </PropertyGroup>
 
   <Target Name="CreateNugetPackage" AfterTargets="Build">
@@ -57,7 +57,7 @@
       <Version></Version>
     </PropertyGroup>
 
-    <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\AddOn.Favorites.dll">
+    <GetVersion AssemblyPath="$(ProjectDir)bin\$(Configuration)\$projectname$.dll">
       <Output TaskParameter="Version" PropertyName="Version" />
     </GetVersion>
 
@@ -75,7 +75,7 @@
 
     <ZipDirectory
       InputPath="$(TmpOutDir)\content"
-      OutputFileName="$(OutDir)\AddOn.Favorites.zip"
+      OutputFileName="$(OutDir)\$projectname$.zip"
       OverwriteExistingFile="true" />
 
     <PropertyGroup>

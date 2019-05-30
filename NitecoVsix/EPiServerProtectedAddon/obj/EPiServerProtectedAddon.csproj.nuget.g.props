@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\HuyHuan\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.1.0</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\HuyHuan\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\HuyHuan\.nuget\packages\entityframework\6.1.0</PkgEntityFramework>
+    <PkgEPiServer_Framework Condition=" '$(PkgEPiServer_Framework)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.framework\11.12.0</PkgEPiServer_Framework>
+    <PkgEPiServer_Framework_AspNet Condition=" '$(PkgEPiServer_Framework_AspNet)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.framework.aspnet\11.12.0</PkgEPiServer_Framework_AspNet>
+    <PkgEPiServer_CMS_UI_Sources Condition=" '$(PkgEPiServer_CMS_UI_Sources)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.ui.sources\11.20.1</PkgEPiServer_CMS_UI_Sources>
+    <PkgEPiServer_CMS_Core Condition=" '$(PkgEPiServer_CMS_Core)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.core\11.12.0</PkgEPiServer_CMS_Core>
+    <PkgEPiServer_CMS_AspNet Condition=" '$(PkgEPiServer_CMS_AspNet)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.aspnet\11.12.0</PkgEPiServer_CMS_AspNet>
+    <PkgEPiServer_CMS_UI_Core Condition=" '$(PkgEPiServer_CMS_UI_Core)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.ui.core\11.20.1</PkgEPiServer_CMS_UI_Core>
+    <PkgEPiServer_CMS_UI_AspNetIdentity Condition=" '$(PkgEPiServer_CMS_UI_AspNetIdentity)' == '' ">C:\Users\HuyHuan\.nuget\packages\episerver.cms.ui.aspnetidentity\11.20.1</PkgEPiServer_CMS_UI_AspNetIdentity>
+  </PropertyGroup>
+</Project>
