@@ -4,7 +4,7 @@
     // Parent class
     'epi/shell/command/_Command',
     // Resources
-    'epi/i18n!epi/nls/addon.favorites.commands'
+    'epi/i18n!epi/nls/$projectname$.favorites.commands'
 ], function(declare, dependency, _Command, resources) {
 
     return declare([_Command], {
@@ -22,7 +22,7 @@
         iconClass: 'epi-iconTrash',
 
         constructor: function() {
-            this.store = dependency.resolve('epi.storeregistry').get('addon.favorites');
+			this.store = dependency.resolve('epi.storeregistry').get('$projectname$.favorites');
         },
 
         _execute: function() {

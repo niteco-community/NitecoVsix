@@ -1,22 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {}
+    "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {
+    "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+        "projectUniqueName": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
         "projectName": "EPiServerProtectedAddonProjectWizard",
-        "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
-        "packagesPath": "C:\\Users\\HuyHuan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
+        "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+        "packagesPath": "C:\\Users\\ha.bui\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
-          "C:\\Users\\HuyHuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
+          "C:\\Users\\ha.bui\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -24,14 +24,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Projects\\Niteco\\BitBucket\\gt-episerverbuild\\SolutionFiles\\LocalPackages": {},
+          "http://hephaestus.maginus.com/nuget": {},
           "http://nuget.episerver.com/feed/packages.svc/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
-                "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj"
+              "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
+                "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj"
               }
             }
           }
@@ -64,19 +66,19 @@
         }
       }
     },
-    "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
+    "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
+        "projectUniqueName": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
         "projectName": "EPiServerProtectedAddon",
-        "projectPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
-        "packagesPath": "C:\\Users\\HuyHuan\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\obj\\",
+        "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
+        "packagesPath": "C:\\Users\\ha.bui\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "D:\\Projects\\Niteco\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
-          "C:\\Users\\HuyHuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
+          "C:\\Users\\ha.bui\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,6 +86,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Projects\\Niteco\\BitBucket\\gt-episerverbuild\\SolutionFiles\\LocalPackages": {},
+          "http://hephaestus.maginus.com/nuget": {},
           "http://nuget.episerver.com/feed/packages.svc/": {},
           "https://api.nuget.org/v3/index.json": {}
         },

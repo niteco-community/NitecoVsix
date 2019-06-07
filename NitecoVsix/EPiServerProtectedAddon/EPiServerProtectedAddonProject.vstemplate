@@ -24,14 +24,14 @@
       <Folder Name="ClientResources">
         <Folder Name="addon">
           <Folder Name="command">
-            <ProjectItem>AddFavorite.js</ProjectItem>
-            <ProjectItem>FavoriteCommandProvider.js</ProjectItem>
-            <ProjectItem>RemoveFavorite.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true">AddFavorite.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true">FavoriteCommandProvider.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true">RemoveFavorite.js</ProjectItem>
           </Folder>
           <Folder Name="component">
-            <ProjectItem>Favorites.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true">Favorites.js</ProjectItem>
           </Folder>
-          <ProjectItem>FavoriteModule.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true">FavoriteModule.js</ProjectItem>
         </Folder>
         <Folder Name="css">
           <Folder Name="images">
@@ -47,7 +47,7 @@
         <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoritesStore.cs">FavoritesStore.cs</ProjectItem>
       </Folder>
       <Folder Name="EmbeddedLangFiles">
-        <ProjectItem>addon_EN.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true">addon_EN.xml</ProjectItem>
       </Folder>
       <Folder Name="Models">
         <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="FavoriteModel.cs">FavoriteModel.cs</ProjectItem>
