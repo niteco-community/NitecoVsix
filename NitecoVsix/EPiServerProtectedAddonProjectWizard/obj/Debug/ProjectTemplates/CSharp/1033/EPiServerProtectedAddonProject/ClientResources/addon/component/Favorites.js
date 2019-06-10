@@ -4,7 +4,7 @@
     // Parent classes
     'dijit/layout/_LayoutWidget', 'epi/shell/command/_WidgetCommandProviderMixin',
     // Other classes
-    'dgrid/OnDemandList', 'dgrid/Keyboard', 'dgrid/Selection', 'addon/command/RemoveFavorite'
+	'dgrid/OnDemandList', 'dgrid/Keyboard', 'dgrid/Selection', '$projectname$/command/RemoveFavorite'
 ], function(array, declare, dependency, domClass, domConstruct, domStyle, keys, lang, mouseUtil, topic, when, _LayoutWidget, _WidgetCommandProviderMixin, OnDemandList, Keyboard, Selection, RemoveFavorite) {
 
     // module:

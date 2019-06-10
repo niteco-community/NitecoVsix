@@ -4,7 +4,7 @@
     // Parent class
     'epi-cms/component/command/_GlobalToolbarCommandProvider',
     // Other classes
-    'addon/command/AddFavorite'
+    '$projectname$/command/AddFavorite'
 ], function(declare, _GlobalToolbarCommandProvider, AddFavorite) {
 
     // module:

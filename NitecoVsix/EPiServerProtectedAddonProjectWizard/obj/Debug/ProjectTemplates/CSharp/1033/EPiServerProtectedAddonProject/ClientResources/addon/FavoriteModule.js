@@ -17,11 +17,11 @@
             var storeRegistry = dependency.resolve('epi.storeregistry'),
                 commandRegistry = dependency.resolve('epi.globalcommandregistry'),
                 path = routes.getRestPath({
-                    moduleArea: 'AddOn.Favorites',
+					moduleArea: '$projectname$',
                     storeName: 'favorites'
                 });
 
-            storeRegistry.create('addon.favorites', path);
+			storeRegistry.create('$projectname$.favorites', path);
 
             commandRegistry.registerProvider('epi.cms.globalToolbar', new FavoriteCommandProvider());
         }
