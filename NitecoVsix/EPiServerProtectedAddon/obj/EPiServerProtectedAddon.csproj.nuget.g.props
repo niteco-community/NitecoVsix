@@ -5,22 +5,32 @@
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\ha.bui\.nuget\packages\</NuGetPackageFolders>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\habui84\.nuget\packages\</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.1.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.3.1</NuGetToolVersion>
   </PropertyGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.netframework.analyzers\2.9.7\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netframework.analyzers\2.9.7\build\Microsoft.NetFramework.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netcore.analyzers\2.9.7\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.netcore.analyzers\2.9.7\build\Microsoft.NetCore.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codequality.analyzers\2.9.7\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codequality.analyzers\2.9.7\build\Microsoft.CodeQuality.Analyzers.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.versioncheckanalyzer\2.9.7\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.versioncheckanalyzer\2.9.7\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codeanalysis.fxcopanalyzers\2.9.7\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codeanalysis.fxcopanalyzers\2.9.7\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\ha.bui\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
-    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\ha.bui\.nuget\packages\entityframework\6.1.0</PkgEntityFramework>
-    <PkgEPiServer_Framework Condition=" '$(PkgEPiServer_Framework)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.framework\11.12.0</PkgEPiServer_Framework>
-    <PkgEPiServer_Framework_AspNet Condition=" '$(PkgEPiServer_Framework_AspNet)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.framework.aspnet\11.12.0</PkgEPiServer_Framework_AspNet>
-    <PkgEPiServer_CMS_UI_Sources Condition=" '$(PkgEPiServer_CMS_UI_Sources)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.cms.ui.sources\11.20.1</PkgEPiServer_CMS_UI_Sources>
-    <PkgEPiServer_CMS_Core Condition=" '$(PkgEPiServer_CMS_Core)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.cms.core\11.12.0</PkgEPiServer_CMS_Core>
-    <PkgEPiServer_CMS_AspNet Condition=" '$(PkgEPiServer_CMS_AspNet)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.cms.aspnet\11.12.0</PkgEPiServer_CMS_AspNet>
-    <PkgEPiServer_CMS_UI_Core Condition=" '$(PkgEPiServer_CMS_UI_Core)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.cms.ui.core\11.20.1</PkgEPiServer_CMS_UI_Core>
-    <PkgEPiServer_CMS_UI_AspNetIdentity Condition=" '$(PkgEPiServer_CMS_UI_AspNetIdentity)' == '' ">C:\Users\ha.bui\.nuget\packages\episerver.cms.ui.aspnetidentity\11.20.1</PkgEPiServer_CMS_UI_AspNetIdentity>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\habui84\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgMicrosoft_NetFramework_Analyzers Condition=" '$(PkgMicrosoft_NetFramework_Analyzers)' == '' ">C:\Users\habui84\.nuget\packages\microsoft.netframework.analyzers\2.9.7</PkgMicrosoft_NetFramework_Analyzers>
+    <PkgMicrosoft_NetCore_Analyzers Condition=" '$(PkgMicrosoft_NetCore_Analyzers)' == '' ">C:\Users\habui84\.nuget\packages\microsoft.netcore.analyzers\2.9.7</PkgMicrosoft_NetCore_Analyzers>
+    <PkgMicrosoft_CodeQuality_Analyzers Condition=" '$(PkgMicrosoft_CodeQuality_Analyzers)' == '' ">C:\Users\habui84\.nuget\packages\microsoft.codequality.analyzers\2.9.7</PkgMicrosoft_CodeQuality_Analyzers>
+    <PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer Condition=" '$(PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer)' == '' ">C:\Users\habui84\.nuget\packages\microsoft.codeanalysis.versioncheckanalyzer\2.9.7</PkgMicrosoft_CodeAnalysis_VersionCheckAnalyzer>
+    <PkgMicrosoft_CodeAnalysis_FxCopAnalyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_FxCopAnalyzers)' == '' ">C:\Users\habui84\.nuget\packages\microsoft.codeanalysis.fxcopanalyzers\2.9.7</PkgMicrosoft_CodeAnalysis_FxCopAnalyzers>
+    <PkgEPiServer_Framework Condition=" '$(PkgEPiServer_Framework)' == '' ">C:\Users\habui84\.nuget\packages\episerver.framework\11.13.2</PkgEPiServer_Framework>
+    <PkgEPiServer_Framework_AspNet Condition=" '$(PkgEPiServer_Framework_AspNet)' == '' ">C:\Users\habui84\.nuget\packages\episerver.framework.aspnet\11.13.2</PkgEPiServer_Framework_AspNet>
+    <PkgEPiServer_CMS_UI_Sources Condition=" '$(PkgEPiServer_CMS_UI_Sources)' == '' ">C:\Users\habui84\.nuget\packages\episerver.cms.ui.sources\11.22.1</PkgEPiServer_CMS_UI_Sources>
+    <PkgEPiServer_CMS_Core Condition=" '$(PkgEPiServer_CMS_Core)' == '' ">C:\Users\habui84\.nuget\packages\episerver.cms.core\11.13.2</PkgEPiServer_CMS_Core>
+    <PkgEPiServer_CMS_AspNet Condition=" '$(PkgEPiServer_CMS_AspNet)' == '' ">C:\Users\habui84\.nuget\packages\episerver.cms.aspnet\11.13.2</PkgEPiServer_CMS_AspNet>
+    <PkgEPiServer_CMS_UI_Core Condition=" '$(PkgEPiServer_CMS_UI_Core)' == '' ">C:\Users\habui84\.nuget\packages\episerver.cms.ui.core\11.22.1</PkgEPiServer_CMS_UI_Core>
   </PropertyGroup>
 </Project>

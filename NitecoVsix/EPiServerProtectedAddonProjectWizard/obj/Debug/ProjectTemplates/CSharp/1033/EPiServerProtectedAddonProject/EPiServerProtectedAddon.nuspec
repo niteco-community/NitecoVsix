@@ -16,7 +16,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\$configuration$\$projectname$.dll" target="lib\net47\" />
+    <file src="bin\$configuration$\$projectname$.dll" target="lib\net46\" />
     <file src="bin\$configuration$\$projectname$.zip" target="content\modules\_protected\$projectname$\" />
   </files>
 </package>

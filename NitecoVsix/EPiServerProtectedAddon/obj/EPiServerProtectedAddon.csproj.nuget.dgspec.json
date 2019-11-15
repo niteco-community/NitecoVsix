@@ -1,70 +1,68 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {}
+    "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
+    "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
+        "projectUniqueName": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
         "projectName": "EPiServerProtectedAddon",
-        "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
-        "packagesPath": "C:\\Users\\ha.bui\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\obj\\",
+        "projectPath": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj",
+        "packagesPath": "C:\\Users\\habui84\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
-          "C:\\Users\\ha.bui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\projects\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
+          "C:\\Users\\habui84\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net472"
+          "net48"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Projects\\Niteco\\BitBucket\\gt-episerverbuild\\SolutionFiles\\LocalPackages": {},
-          "http://hephaestus.maginus.com/nuget": {},
-          "http://nuget.episerver.com/feed/packages.svc/": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.episerver.com/feed/packages.svc/": {}
         },
         "frameworks": {
-          "net472": {
+          "net48": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "net472": {
+        "net48": {
           "dependencies": {
+            "EPiServer.CMS.AspNet": {
+              "target": "Package",
+              "version": "[11.13.2, )"
+            },
             "EPiServer.CMS.Core": {
               "target": "Package",
-              "version": "[11.12.0, )"
+              "version": "[11.13.2, )"
             },
             "EPiServer.CMS.UI": {
               "target": "Package",
-              "version": "[11.20.1, )"
-            },
-            "EPiServer.CMS.UI.AspNetIdentity": {
-              "target": "Package",
-              "version": "[11.20.1, )"
+              "version": "[11.22.1, )"
             },
             "EPiServer.CMS.UI.Core": {
               "target": "Package",
-              "version": "[11.20.1, )"
+              "version": "[11.22.1, )"
             },
             "EPiServer.CMS.UI.Sources": {
               "target": "Package",
-              "version": "[11.20.1, )"
+              "version": "[11.22.1, )"
             },
             "EPiServer.Framework": {
               "target": "Package",
-              "version": "[11.12.0, )"
+              "version": "[11.13.2, )"
             },
             "EPiServer.Framework.AspNet": {
               "target": "Package",
-              "version": "[11.12.0, )"
+              "version": "[11.13.2, )"
             },
             "Microsoft.AspNet.Mvc": {
               "target": "Package",
@@ -77,6 +75,12 @@
             "Microsoft.AspNet.WebPages": {
               "target": "Package",
               "version": "[3.2.7, )"
+            },
+            "Microsoft.CodeAnalysis.FxCopAnalyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.9.7, )"
             },
             "Microsoft.Tpl.Dataflow": {
               "target": "Package",

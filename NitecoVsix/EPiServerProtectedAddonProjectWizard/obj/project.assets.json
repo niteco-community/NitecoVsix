@@ -1,12 +1,18 @@
 {
   "version": 3,
   "targets": {
-    ".NETFramework,Version=v4.7.2": {
+    ".NETFramework,Version=v4.8": {
       "Castle.Core/4.2.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
-        ]
+        ],
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
       },
       "Castle.Windsor/4.1.0": {
         "type": "package",
@@ -18,24 +24,10 @@
           "System.Web"
         ],
         "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.1.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         }
       },
       "EnvDTE/8.0.2": {
@@ -102,11 +94,11 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS.AspNet/11.12.0": {
+      "EPiServer.CMS.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
+          "EPiServer.CMS.Core": "[11.13.2]",
+          "EPiServer.Framework.AspNet": "[11.13.2]"
         },
         "compile": {
           "lib/net461/EPiServer.Cms.AspNet.dll": {},
@@ -121,12 +113,12 @@
           "lib/net461/EPiServer.Web.WebControls.dll": {}
         }
       },
-      "EPiServer.CMS.Core/11.12.0": {
+      "EPiServer.CMS.Core/11.13.2": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "[4.2.1, 5.0.0)",
           "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
         "compile": {
@@ -140,36 +132,13 @@
           "lib/net461/EPiServer.dll": {}
         }
       },
-      "EPiServer.CMS.UI/11.20.1": {
+      "EPiServer.CMS.UI/11.22.1": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
+          "EPiServer.CMS.UI.Core": "[11.22.1]"
         }
       },
-      "EPiServer.CMS.UI.AspNetIdentity/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)",
-          "EPiServer.CMS.UI.Core": "[11.20.1]",
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
-          "Microsoft.AspNet.Identity.Owin": "2.2.1",
-          "Microsoft.Owin": "3.0.1",
-          "Microsoft.Owin.Host.SystemWeb": "3.0.1",
-          "Microsoft.Owin.Security": "2.2.1",
-          "Microsoft.Owin.Security.Cookies": "2.2.1",
-          "Microsoft.Owin.Security.OAuth": "2.2.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
+      "EPiServer.CMS.UI.Core/11.22.1": {
         "type": "package",
         "dependencies": {
           "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
@@ -187,13 +156,13 @@
           "lib/net461/EPiServer.UI.dll": {}
         }
       },
-      "EPiServer.CMS.UI.Sources/11.20.1": {
+      "EPiServer.CMS.UI.Sources/11.22.1": {
         "type": "package"
       },
-      "EPiServer.Framework/11.12.0": {
+      "EPiServer.Framework/11.13.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
+          "Newtonsoft.Json": "[9.0.1, 13.0.0)",
           "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
           "System.Data.SqlClient": "[4.4.0, 5.0.0)",
           "System.Reflection.Emit": "[4.3.0, 5.0.0)",
@@ -220,10 +189,10 @@
           "lib/net461/EPiServer.Licensing.dll": {}
         }
       },
-      "EPiServer.Framework.AspNet/11.12.0": {
+      "EPiServer.Framework.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
@@ -241,43 +210,6 @@
         },
         "runtime": {
           "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Owin/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.Owin.Security": "2.1.0",
-          "Microsoft.Owin.Security.Cookies": "2.1.0",
-          "Microsoft.Owin.Security.OAuth": "2.1.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -376,73 +308,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Owin/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        }
-      },
-      "Microsoft.Owin.Host.SystemWeb/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.Cookies/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.OAuth/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Newtonsoft.Json": "6.0.4",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
       "Microsoft.Tpl.Dataflow/4.5.24": {
@@ -1440,15 +1305,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Owin/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Owin.dll": {}
         }
       },
       "stdole/7.0.3302": {
@@ -2003,15 +1859,15 @@
       },
       "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
+        "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "EPiServer.CMS.UI.AspNetIdentity": "11.20.1",
-          "EPiServer.CMS.UI.Core": "11.20.1",
-          "EPiServer.CMS.UI.Sources": "11.20.1",
-          "EPiServer.Framework": "11.12.0",
-          "EPiServer.Framework.AspNet": "11.12.0",
+          "EPiServer.CMS.AspNet": "11.13.2",
+          "EPiServer.CMS.Core": "11.13.2",
+          "EPiServer.CMS.UI": "11.22.1",
+          "EPiServer.CMS.UI.Core": "11.22.1",
+          "EPiServer.CMS.UI.Sources": "11.22.1",
+          "EPiServer.Framework": "11.13.2",
+          "EPiServer.Framework.AspNet": "11.13.2",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNet.Razor": "3.2.7",
           "Microsoft.AspNet.WebPages": "3.2.7",
@@ -2038,12 +1894,18 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win": {
+    ".NETFramework,Version=v4.8/win": {
       "Castle.Core/4.2.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
-        ]
+        ],
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
       },
       "Castle.Windsor/4.1.0": {
         "type": "package",
@@ -2055,24 +1917,10 @@
           "System.Web"
         ],
         "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.1.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         }
       },
       "EnvDTE/8.0.2": {
@@ -2139,11 +1987,11 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS.AspNet/11.12.0": {
+      "EPiServer.CMS.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
+          "EPiServer.CMS.Core": "[11.13.2]",
+          "EPiServer.Framework.AspNet": "[11.13.2]"
         },
         "compile": {
           "lib/net461/EPiServer.Cms.AspNet.dll": {},
@@ -2158,12 +2006,12 @@
           "lib/net461/EPiServer.Web.WebControls.dll": {}
         }
       },
-      "EPiServer.CMS.Core/11.12.0": {
+      "EPiServer.CMS.Core/11.13.2": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "[4.2.1, 5.0.0)",
           "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
         "compile": {
@@ -2177,36 +2025,13 @@
           "lib/net461/EPiServer.dll": {}
         }
       },
-      "EPiServer.CMS.UI/11.20.1": {
+      "EPiServer.CMS.UI/11.22.1": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
+          "EPiServer.CMS.UI.Core": "[11.22.1]"
         }
       },
-      "EPiServer.CMS.UI.AspNetIdentity/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)",
-          "EPiServer.CMS.UI.Core": "[11.20.1]",
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
-          "Microsoft.AspNet.Identity.Owin": "2.2.1",
-          "Microsoft.Owin": "3.0.1",
-          "Microsoft.Owin.Host.SystemWeb": "3.0.1",
-          "Microsoft.Owin.Security": "2.2.1",
-          "Microsoft.Owin.Security.Cookies": "2.2.1",
-          "Microsoft.Owin.Security.OAuth": "2.2.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
+      "EPiServer.CMS.UI.Core/11.22.1": {
         "type": "package",
         "dependencies": {
           "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
@@ -2224,13 +2049,13 @@
           "lib/net461/EPiServer.UI.dll": {}
         }
       },
-      "EPiServer.CMS.UI.Sources/11.20.1": {
+      "EPiServer.CMS.UI.Sources/11.22.1": {
         "type": "package"
       },
-      "EPiServer.Framework/11.12.0": {
+      "EPiServer.Framework/11.13.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
+          "Newtonsoft.Json": "[9.0.1, 13.0.0)",
           "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
           "System.Data.SqlClient": "[4.4.0, 5.0.0)",
           "System.Reflection.Emit": "[4.3.0, 5.0.0)",
@@ -2257,10 +2082,10 @@
           "lib/net461/EPiServer.Licensing.dll": {}
         }
       },
-      "EPiServer.Framework.AspNet/11.12.0": {
+      "EPiServer.Framework.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
@@ -2278,43 +2103,6 @@
         },
         "runtime": {
           "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Owin/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.Owin.Security": "2.1.0",
-          "Microsoft.Owin.Security.Cookies": "2.1.0",
-          "Microsoft.Owin.Security.OAuth": "2.1.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -2413,73 +2201,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Owin/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        }
-      },
-      "Microsoft.Owin.Host.SystemWeb/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.Cookies/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.OAuth/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Newtonsoft.Json": "6.0.4",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
       "Microsoft.Tpl.Dataflow/4.5.24": {
@@ -3477,15 +3198,6 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Owin/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Owin.dll": {}
         }
       },
       "stdole/7.0.3302": {
@@ -3976,15 +3688,15 @@
       },
       "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
+        "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "EPiServer.CMS.UI.AspNetIdentity": "11.20.1",
-          "EPiServer.CMS.UI.Core": "11.20.1",
-          "EPiServer.CMS.UI.Sources": "11.20.1",
-          "EPiServer.Framework": "11.12.0",
-          "EPiServer.Framework.AspNet": "11.12.0",
+          "EPiServer.CMS.AspNet": "11.13.2",
+          "EPiServer.CMS.Core": "11.13.2",
+          "EPiServer.CMS.UI": "11.22.1",
+          "EPiServer.CMS.UI.Core": "11.22.1",
+          "EPiServer.CMS.UI.Sources": "11.22.1",
+          "EPiServer.Framework": "11.13.2",
+          "EPiServer.Framework.AspNet": "11.13.2",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNet.Razor": "3.2.7",
           "Microsoft.AspNet.WebPages": "3.2.7",
@@ -4011,12 +3723,18 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x64": {
+    ".NETFramework,Version=v4.8/win-x64": {
       "Castle.Core/4.2.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
-        ]
+        ],
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
       },
       "Castle.Windsor/4.1.0": {
         "type": "package",
@@ -4028,24 +3746,10 @@
           "System.Web"
         ],
         "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.1.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         }
       },
       "EnvDTE/8.0.2": {
@@ -4112,11 +3816,11 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS.AspNet/11.12.0": {
+      "EPiServer.CMS.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
+          "EPiServer.CMS.Core": "[11.13.2]",
+          "EPiServer.Framework.AspNet": "[11.13.2]"
         },
         "compile": {
           "lib/net461/EPiServer.Cms.AspNet.dll": {},
@@ -4131,12 +3835,12 @@
           "lib/net461/EPiServer.Web.WebControls.dll": {}
         }
       },
-      "EPiServer.CMS.Core/11.12.0": {
+      "EPiServer.CMS.Core/11.13.2": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "[4.2.1, 5.0.0)",
           "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
         "compile": {
@@ -4150,36 +3854,13 @@
           "lib/net461/EPiServer.dll": {}
         }
       },
-      "EPiServer.CMS.UI/11.20.1": {
+      "EPiServer.CMS.UI/11.22.1": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
+          "EPiServer.CMS.UI.Core": "[11.22.1]"
         }
       },
-      "EPiServer.CMS.UI.AspNetIdentity/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)",
-          "EPiServer.CMS.UI.Core": "[11.20.1]",
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
-          "Microsoft.AspNet.Identity.Owin": "2.2.1",
-          "Microsoft.Owin": "3.0.1",
-          "Microsoft.Owin.Host.SystemWeb": "3.0.1",
-          "Microsoft.Owin.Security": "2.2.1",
-          "Microsoft.Owin.Security.Cookies": "2.2.1",
-          "Microsoft.Owin.Security.OAuth": "2.2.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
+      "EPiServer.CMS.UI.Core/11.22.1": {
         "type": "package",
         "dependencies": {
           "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
@@ -4197,13 +3878,13 @@
           "lib/net461/EPiServer.UI.dll": {}
         }
       },
-      "EPiServer.CMS.UI.Sources/11.20.1": {
+      "EPiServer.CMS.UI.Sources/11.22.1": {
         "type": "package"
       },
-      "EPiServer.Framework/11.12.0": {
+      "EPiServer.Framework/11.13.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
+          "Newtonsoft.Json": "[9.0.1, 13.0.0)",
           "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
           "System.Data.SqlClient": "[4.4.0, 5.0.0)",
           "System.Reflection.Emit": "[4.3.0, 5.0.0)",
@@ -4230,10 +3911,10 @@
           "lib/net461/EPiServer.Licensing.dll": {}
         }
       },
-      "EPiServer.Framework.AspNet/11.12.0": {
+      "EPiServer.Framework.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
@@ -4251,43 +3932,6 @@
         },
         "runtime": {
           "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Owin/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.Owin.Security": "2.1.0",
-          "Microsoft.Owin.Security.Cookies": "2.1.0",
-          "Microsoft.Owin.Security.OAuth": "2.1.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -4386,73 +4030,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Owin/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        }
-      },
-      "Microsoft.Owin.Host.SystemWeb/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.Cookies/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.OAuth/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Newtonsoft.Json": "6.0.4",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
       "Microsoft.Tpl.Dataflow/4.5.24": {
@@ -5452,15 +5029,6 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "Owin/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Owin.dll": {}
-        }
-      },
       "stdole/7.0.3302": {
         "type": "package",
         "compile": {
@@ -5949,15 +5517,15 @@
       },
       "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
+        "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "EPiServer.CMS.UI.AspNetIdentity": "11.20.1",
-          "EPiServer.CMS.UI.Core": "11.20.1",
-          "EPiServer.CMS.UI.Sources": "11.20.1",
-          "EPiServer.Framework": "11.12.0",
-          "EPiServer.Framework.AspNet": "11.12.0",
+          "EPiServer.CMS.AspNet": "11.13.2",
+          "EPiServer.CMS.Core": "11.13.2",
+          "EPiServer.CMS.UI": "11.22.1",
+          "EPiServer.CMS.UI.Core": "11.22.1",
+          "EPiServer.CMS.UI.Sources": "11.22.1",
+          "EPiServer.Framework": "11.13.2",
+          "EPiServer.Framework.AspNet": "11.13.2",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNet.Razor": "3.2.7",
           "Microsoft.AspNet.WebPages": "3.2.7",
@@ -5984,12 +5552,18 @@
         }
       }
     },
-    ".NETFramework,Version=v4.7.2/win-x86": {
+    ".NETFramework,Version=v4.8/win-x86": {
       "Castle.Core/4.2.1": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
-        ]
+        ],
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
       },
       "Castle.Windsor/4.1.0": {
         "type": "package",
@@ -6001,24 +5575,10 @@
           "System.Web"
         ],
         "compile": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/Castle.Windsor.dll": {}
-        }
-      },
-      "EntityFramework/6.1.0": {
-        "type": "package",
-        "frameworkAssemblies": [
-          "System.ComponentModel.DataAnnotations"
-        ],
-        "compile": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/EntityFramework.SqlServer.dll": {},
-          "lib/net45/EntityFramework.dll": {}
+          "lib/net45/Castle.Windsor.dll": {}
         }
       },
       "EnvDTE/8.0.2": {
@@ -6085,11 +5645,11 @@
           "lib/net10/_._": {}
         }
       },
-      "EPiServer.CMS.AspNet/11.12.0": {
+      "EPiServer.CMS.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.Core": "[11.12.0]",
-          "EPiServer.Framework.AspNet": "[11.12.0]"
+          "EPiServer.CMS.Core": "[11.13.2]",
+          "EPiServer.Framework.AspNet": "[11.13.2]"
         },
         "compile": {
           "lib/net461/EPiServer.Cms.AspNet.dll": {},
@@ -6104,12 +5664,12 @@
           "lib/net461/EPiServer.Web.WebControls.dll": {}
         }
       },
-      "EPiServer.CMS.Core/11.12.0": {
+      "EPiServer.CMS.Core/11.13.2": {
         "type": "package",
         "dependencies": {
           "Castle.Core": "[4.2.1, 5.0.0)",
           "Castle.Windsor": "[4.1.0, 5.0.0)",
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
         "compile": {
@@ -6123,36 +5683,13 @@
           "lib/net461/EPiServer.dll": {}
         }
       },
-      "EPiServer.CMS.UI/11.20.1": {
+      "EPiServer.CMS.UI/11.22.1": {
         "type": "package",
         "dependencies": {
-          "EPiServer.CMS.UI.Core": "[11.20.1]"
+          "EPiServer.CMS.UI.Core": "[11.22.1]"
         }
       },
-      "EPiServer.CMS.UI.AspNetIdentity/11.20.1": {
-        "type": "package",
-        "dependencies": {
-          "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)",
-          "EPiServer.CMS.UI.Core": "[11.20.1]",
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.AspNet.Identity.EntityFramework": "2.2.1",
-          "Microsoft.AspNet.Identity.Owin": "2.2.1",
-          "Microsoft.Owin": "3.0.1",
-          "Microsoft.Owin.Host.SystemWeb": "3.0.1",
-          "Microsoft.Owin.Security": "2.2.1",
-          "Microsoft.Owin.Security.Cookies": "2.2.1",
-          "Microsoft.Owin.Security.OAuth": "2.2.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        },
-        "runtime": {
-          "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll": {}
-        }
-      },
-      "EPiServer.CMS.UI.Core/11.20.1": {
+      "EPiServer.CMS.UI.Core/11.22.1": {
         "type": "package",
         "dependencies": {
           "EPiServer.CMS.AspNet": "[11.12.0, 12.0.0)"
@@ -6170,13 +5707,13 @@
           "lib/net461/EPiServer.UI.dll": {}
         }
       },
-      "EPiServer.CMS.UI.Sources/11.20.1": {
+      "EPiServer.CMS.UI.Sources/11.22.1": {
         "type": "package"
       },
-      "EPiServer.Framework/11.12.0": {
+      "EPiServer.Framework/11.13.2": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "[9.0.1, 12.0.0)",
+          "Newtonsoft.Json": "[9.0.1, 13.0.0)",
           "System.ComponentModel.Annotations": "[4.4.0, 5.0.0)",
           "System.Data.SqlClient": "[4.4.0, 5.0.0)",
           "System.Reflection.Emit": "[4.3.0, 5.0.0)",
@@ -6203,10 +5740,10 @@
           "lib/net461/EPiServer.Licensing.dll": {}
         }
       },
-      "EPiServer.Framework.AspNet/11.12.0": {
+      "EPiServer.Framework.AspNet/11.13.2": {
         "type": "package",
         "dependencies": {
-          "EPiServer.Framework": "[11.12.0]",
+          "EPiServer.Framework": "[11.13.2]",
           "Microsoft.AspNet.Mvc": "[5.2.3, 6.0.0)",
           "Microsoft.Tpl.Dataflow": "[4.5.24, 5.0.0)"
         },
@@ -6224,43 +5761,6 @@
         },
         "runtime": {
           "lib/2.0/log4net.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Core/2.2.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Core.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "EntityFramework": "6.1.0",
-          "Microsoft.AspNet.Identity.Core": "2.2.1"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        }
-      },
-      "Microsoft.AspNet.Identity.Owin/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Identity.Core": "2.2.1",
-          "Microsoft.Owin.Security": "2.1.0",
-          "Microsoft.Owin.Security.Cookies": "2.1.0",
-          "Microsoft.Owin.Security.OAuth": "2.1.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.Identity.Owin.dll": {}
         }
       },
       "Microsoft.AspNet.Mvc/5.2.7": {
@@ -6359,73 +5859,6 @@
         },
         "runtime": {
           "lib/net46/_._": {}
-        }
-      },
-      "Microsoft.Owin/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {}
-        }
-      },
-      "Microsoft.Owin.Host.SystemWeb/3.0.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.1",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Host.SystemWeb.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.Cookies/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
-        }
-      },
-      "Microsoft.Owin.Security.OAuth/3.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "3.0.0",
-          "Microsoft.Owin.Security": "3.0.0",
-          "Newtonsoft.Json": "6.0.4",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.OAuth.dll": {}
         }
       },
       "Microsoft.Tpl.Dataflow/4.5.24": {
@@ -7425,15 +6858,6 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "Owin/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Owin.dll": {}
-        }
-      },
       "stdole/7.0.3302": {
         "type": "package",
         "compile": {
@@ -7922,15 +7346,15 @@
       },
       "EPiServerProtectedAddon/1.0.0": {
         "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
+        "framework": ".NETFramework,Version=v4.8",
         "dependencies": {
-          "EPiServer.CMS.Core": "11.12.0",
-          "EPiServer.CMS.UI": "11.20.1",
-          "EPiServer.CMS.UI.AspNetIdentity": "11.20.1",
-          "EPiServer.CMS.UI.Core": "11.20.1",
-          "EPiServer.CMS.UI.Sources": "11.20.1",
-          "EPiServer.Framework": "11.12.0",
-          "EPiServer.Framework.AspNet": "11.12.0",
+          "EPiServer.CMS.AspNet": "11.13.2",
+          "EPiServer.CMS.Core": "11.13.2",
+          "EPiServer.CMS.UI": "11.22.1",
+          "EPiServer.CMS.UI.Core": "11.22.1",
+          "EPiServer.CMS.UI.Sources": "11.22.1",
+          "EPiServer.Framework": "11.13.2",
+          "EPiServer.Framework.AspNet": "11.13.2",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.AspNet.Razor": "3.2.7",
           "Microsoft.AspNet.WebPages": "3.2.7",
@@ -7965,6 +7389,7 @@
       "path": "castle.core/4.2.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ASL - Apache Software Foundation License.txt",
         "CHANGELOG.md",
         "LICENSE",
@@ -7973,6 +7398,8 @@
         "lib/net35/Castle.Core.dll",
         "lib/net35/Castle.Core.xml",
         "lib/net40/Castle.Core.dll",
+        "lib/net40/Castle.Core.xml",
+        "lib/net45/Castle.Core.dll",
         "lib/net45/Castle.Core.xml",
         "lib/netstandard1.3/Castle.Core.dll",
         "lib/netstandard1.3/Castle.Core.xml",
@@ -7985,42 +7412,16 @@
       "path": "castle.windsor/4.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ASL - Apache Software Foundation License.txt",
         "CHANGELOG.md",
         "LICENSE",
         "castle.windsor.4.1.0.nupkg.sha512",
         "castle.windsor.nuspec",
-        "lib/netstandard1.6/Castle.Windsor.dll"
-      ]
-    },
-    "EntityFramework/6.1.0": {
-      "sha512": "u/M0OEfqxTUsL5BwzD66eBGm278/ozqdLK3JvMO6QwUxxc+z7ZUkTYm4suDhWRqzkc6mOhvXDQY5dZUwbldxyQ==",
-      "type": "package",
-      "path": "entityframework/6.1.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/App.config.transform",
-        "content/Web.config.transform",
-        "entityframework.6.1.0.nupkg.sha512",
-        "entityframework.nuspec",
-        "lib/net40/EntityFramework.SqlServer.dll",
-        "lib/net40/EntityFramework.SqlServer.xml",
-        "lib/net40/EntityFramework.dll",
-        "lib/net40/EntityFramework.xml",
-        "lib/net45/EntityFramework.SqlServer.dll",
-        "lib/net45/EntityFramework.SqlServer.xml",
-        "lib/net45/EntityFramework.dll",
-        "lib/net45/EntityFramework.xml",
-        "tools/EntityFramework.PowerShell.Utility.dll",
-        "tools/EntityFramework.PowerShell.dll",
-        "tools/EntityFramework.psd1",
-        "tools/EntityFramework.psm1",
-        "tools/about_EntityFramework.help.txt",
-        "tools/init.ps1",
-        "tools/install.ps1",
-        "tools/migrate.exe"
+        "lib/net45/Castle.Windsor.dll",
+        "lib/net45/Castle.Windsor.xml",
+        "lib/netstandard1.6/Castle.Windsor.dll",
+        "lib/netstandard1.6/Castle.Windsor.xml"
       ]
     },
     "EnvDTE/8.0.2": {
@@ -8083,14 +7484,14 @@
         "lib/net10/EnvDTE90a.dll"
       ]
     },
-    "EPiServer.CMS.AspNet/11.12.0": {
-      "sha512": "yHcoixjTBIFW8pe7Gnr+bSozrre1osGgH+bCr++p5WKMecTwr07CFtiqH2nH8hJ4Ctx5pgEM6b1/2K2OOpR4KQ==",
+    "EPiServer.CMS.AspNet/11.13.2": {
+      "sha512": "m6cmvN+ki9lg1bjU82ZeW2UFv+eDQfyxl9QuwtANcAGZENcJybx4Raqsbe6xoJ0Au15Q393cQWf3NT2IJPfKvQ==",
       "type": "package",
-      "path": "episerver.cms.aspnet/11.12.0",
+      "path": "episerver.cms.aspnet/11.13.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        "episerver.cms.aspnet.11.12.0.nupkg.sha512",
+        "episerver.cms.aspnet.11.13.2.nupkg.sha512",
         "episerver.cms.aspnet.nuspec",
         "lib/net461/EPiServer.Cms.AspNet.dll",
         "lib/net461/EPiServer.Cms.AspNet.xml",
@@ -8110,14 +7511,14 @@
         "tools/webconfig-baseline.config"
       ]
     },
-    "EPiServer.CMS.Core/11.12.0": {
-      "sha512": "FOd3FER6jqaw7h5L0zc6YNg1maxQ7To7EJDCioRLyjK6nb7XPHMwkSSGMHcUMFskUWHkG9pesXP4R/SbRHufgA==",
+    "EPiServer.CMS.Core/11.13.2": {
+      "sha512": "aeywT+hbZ0kZRDF6+igNAUaXOK45UBi0O8vAC/yllzaSLuD/Yc5lohMmPIbUofLXxFuFwOZfjxACryPix1JD2w==",
       "type": "package",
-      "path": "episerver.cms.core/11.12.0",
+      "path": "episerver.cms.core/11.13.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        "episerver.cms.core.11.12.0.nupkg.sha512",
+        "episerver.cms.core.11.13.2.nupkg.sha512",
         "episerver.cms.core.nuspec",
         "lib/net461/EPiServer.Enterprise.dll",
         "lib/net461/EPiServer.Enterprise.xml",
@@ -8186,46 +7587,31 @@
         "tools/epiupdates/sql/9.8.3.sql"
       ]
     },
-    "EPiServer.CMS.UI/11.20.1": {
-      "sha512": "4uWKT+Vpyl7jV88BeQN1sw1NqWgwTeJm275wntry8JaNI6JKkpcxnFuCwaNbX6LkeJxgesUTPelQcnQK7JgN5w==",
+    "EPiServer.CMS.UI/11.22.1": {
+      "sha512": "1FsegAzsFcTbsus/H1UCfty/qFYc2UmpY0GG7pNeZo7QpC12ckFlKG46KhOSKpLm0Tex547TdXi/Gz/vdDdfrw==",
       "type": "package",
-      "path": "episerver.cms.ui/11.20.1",
+      "path": "episerver.cms.ui/11.22.1",
       "files": [
         ".nupkg.metadata",
         "content/modules/_protected/CMS/CMS.zip",
         "content/modules/_protected/CMS/web.config",
         "content/modules/_protected/Shell/Shell.zip",
         "content/modules/_protected/Shell/web.config",
-        "episerver.cms.ui.11.20.1.nupkg.sha512",
+        "episerver.cms.ui.11.22.1.nupkg.sha512",
         "episerver.cms.ui.nuspec",
         "readme.txt"
       ]
     },
-    "EPiServer.CMS.UI.AspNetIdentity/11.20.1": {
-      "sha512": "jwlWVgeKkc9bvD4dPAqJkt+gqublRo2jQxV+1p5S5+IsUK1ua6Q9ITQB1zpQ2gxcr/JdAcLCR09+D9jeEITw1Q==",
+    "EPiServer.CMS.UI.Core/11.22.1": {
+      "sha512": "Wjm4h02vyFg2KDsZtWWe5cQRNNfBgrR/6n6QKXgnjDJDTahartW2FYDQWa5yrpiUBqhmVSMDqGFJCpTMqVMsWw==",
       "type": "package",
-      "path": "episerver.cms.ui.aspnetidentity/11.20.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        "episerver.cms.ui.aspnetidentity.11.20.1.nupkg.sha512",
-        "episerver.cms.ui.aspnetidentity.nuspec",
-        "lib/net461/EPiServer.Cms.UI.AspNetIdentity.dll",
-        "tools/Get-WebConfig.psm1",
-        "tools/Update-AssemblyBinding.psm1",
-        "tools/install.ps1"
-      ]
-    },
-    "EPiServer.CMS.UI.Core/11.20.1": {
-      "sha512": "pfjpPz0Rc4DDtdhARnOtyPuR9bCQBuQO0dmtIjlG0cOSBDRKmfY7i+72h1mSPMqjK8mS0nfHeK7lfFAoj3dTIw==",
-      "type": "package",
-      "path": "episerver.cms.ui.core/11.20.1",
+      "path": "episerver.cms.ui.core/11.22.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         "content/net461/web.config.install.xdt",
         "content/net461/web.config.uninstall.xdt",
-        "episerver.cms.ui.core.11.20.1.nupkg.sha512",
+        "episerver.cms.ui.core.11.22.1.nupkg.sha512",
         "episerver.cms.ui.core.nuspec",
         "lib/net461/EPiServer.Cms.Shell.UI.dll",
         "lib/net461/EPiServer.Shell.UI.dll",
@@ -8243,26 +7629,26 @@
         "tools/Update-PackagesConfig.psm1"
       ]
     },
-    "EPiServer.CMS.UI.Sources/11.20.1": {
-      "sha512": "IuwljvVTqLq21MzewDvtPm71Gj17wgyrPrcLAEEt1a2D6GAFrLleSOwZ1oO3GKFA13vUuJ+T13MeBTK6WATJTQ==",
+    "EPiServer.CMS.UI.Sources/11.22.1": {
+      "sha512": "hoKkGoWrnr0Y8xoxbxb98jDRPnotWdJFvQgzrlVRyicl/teI+J4mUpaefW1QFU+y0/bBpXpuefKyZimU2gd4JA==",
       "type": "package",
-      "path": "episerver.cms.ui.sources/11.20.1",
+      "path": "episerver.cms.ui.sources/11.22.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        "episerver.cms.ui.sources.11.20.1.nupkg.sha512",
+        "episerver.cms.ui.sources.11.22.1.nupkg.sha512",
         "episerver.cms.ui.sources.nuspec",
         "tools/EPiServer.UI.Sources.zip"
       ]
     },
-    "EPiServer.Framework/11.12.0": {
-      "sha512": "FUVKyTisJuw6R7DXwZyhXJUNHkP/7n1q1nZQzZDin+YwedNMSTCNTn4yn5hoe6UGKsMHTxUIPR7UBcccLcQWuw==",
+    "EPiServer.Framework/11.13.2": {
+      "sha512": "1opa9ZKm+3lAsuqDLyToGnXedGDxIKmb7uAhX0gHOa6/ILFB6oPqqRR5qqz52//fmJmTm8e6csshHBmaxy65xQ==",
       "type": "package",
-      "path": "episerver.framework/11.12.0",
+      "path": "episerver.framework/11.13.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        "episerver.framework.11.12.0.nupkg.sha512",
+        "episerver.framework.11.13.2.nupkg.sha512",
         "episerver.framework.nuspec",
         "lib/net461/EPiServer.ApplicationModules.dll",
         "lib/net461/EPiServer.Data.Cache.dll",
@@ -8289,14 +7675,14 @@
         "tools/init.ps1"
       ]
     },
-    "EPiServer.Framework.AspNet/11.12.0": {
-      "sha512": "MP3XnTmbtXu/fZEWso6KsbigfNdonUsIiDt7uznuDaisO44QBcyi3LNTaAWqW/3TKg2tIVS76CY5k7yt/j9Tgw==",
+    "EPiServer.Framework.AspNet/11.13.2": {
+      "sha512": "f9EUpWjNSWBIuo5FyXPaz0q/JENUH8lefMM6FEIvMNxl7kbIzg5nSw5nrXCArUfIK5FWnjo4ZCOrFFqKbXlJ/A==",
       "type": "package",
-      "path": "episerver.framework.aspnet/11.12.0",
+      "path": "episerver.framework.aspnet/11.13.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
-        "episerver.framework.aspnet.11.12.0.nupkg.sha512",
+        "episerver.framework.aspnet.11.13.2.nupkg.sha512",
         "episerver.framework.aspnet.nuspec",
         "lib/net461/EPiServer.Framework.AspNet.dll",
         "lib/net461/EPiServer.Framework.AspNet.xml",
@@ -8320,43 +7706,6 @@
         "lib/2.0/log4net.xml",
         "log4net.1.2.10.nupkg.sha512",
         "log4net.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Identity.Core/2.2.1": {
-      "sha512": "jjurNglpmcv0SLBd4Fmar8ZoJ2yqfTf6iuP3p8wVH7Nvanfo8l3qTBzq3qRQz2BQlb6iXJiDWPjcnIImVz512g==",
-      "type": "package",
-      "path": "microsoft.aspnet.identity.core/2.2.1",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net45/Microsoft.AspNet.Identity.Core.dll",
-        "lib/net45/Microsoft.AspNet.Identity.Core.xml",
-        "microsoft.aspnet.identity.core.2.2.1.nupkg.sha512",
-        "microsoft.aspnet.identity.core.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Identity.EntityFramework/2.2.1": {
-      "sha512": "g3tCS3vZ+hPjqrGrkq2hpl2Wc5Ltaj+kInZM80uENHldTHmrvCpVXvTXcvTt7HU3vupjmYFfNWVFRWCypNZgug==",
-      "type": "package",
-      "path": "microsoft.aspnet.identity.entityframework/2.2.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll",
-        "lib/net45/Microsoft.AspNet.Identity.EntityFramework.xml",
-        "microsoft.aspnet.identity.entityframework.2.2.1.nupkg.sha512",
-        "microsoft.aspnet.identity.entityframework.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.Identity.Owin/2.2.1": {
-      "sha512": "Cz/dqC85+6bgPj9Mt1qGLJ+v8HdTqXTMe1ms4e8pzPXJjDJw3DK7XtimtDtWwiDs63vnIDgy195TByV9wxEwjA==",
-      "type": "package",
-      "path": "microsoft.aspnet.identity.owin/2.2.1",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net45/Microsoft.AspNet.Identity.Owin.dll",
-        "lib/net45/Microsoft.AspNet.Identity.Owin.xml",
-        "microsoft.aspnet.identity.owin.2.2.1.nupkg.sha512",
-        "microsoft.aspnet.identity.owin.nuspec"
       ]
     },
     "Microsoft.AspNet.Mvc/5.2.7": {
@@ -8482,78 +7831,12 @@
         "notices/THIRDPARTYNOTICES.txt"
       ]
     },
-    "Microsoft.Owin/3.0.1": {
-      "sha512": "64yZsGN9uRnXNVAyAT4F6KWmdDUJ6yX4uqzxKTdGANKH1oMt0IKZ7THRRa3mXIOo8iSu4tq/DCBUycUY9pXZzw==",
-      "type": "package",
-      "path": "microsoft.owin/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.XML",
-        "lib/net45/Microsoft.Owin.dll",
-        "microsoft.owin.3.0.1.nupkg.sha512",
-        "microsoft.owin.nuspec"
-      ]
-    },
-    "Microsoft.Owin.Host.SystemWeb/3.0.1": {
-      "sha512": "sNKJ7cPOnXpK5fr7upc77RF0MYUg1lKeR3hiMVhXWH9LLK7UZN7bKf2YwObT0wn+bAs3LRXdjbqDH48PF243Nw==",
-      "type": "package",
-      "path": "microsoft.owin.host.systemweb/3.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.Host.SystemWeb.dll",
-        "lib/net45/Microsoft.Owin.Host.SystemWeb.xml",
-        "microsoft.owin.host.systemweb.3.0.1.nupkg.sha512",
-        "microsoft.owin.host.systemweb.nuspec"
-      ]
-    },
-    "Microsoft.Owin.Security/3.0.0": {
-      "sha512": "YkMVSORBS15sbFbNWOZBOe1JR295rKIy/N9Kym61taTOeqSqY0Uz0bCEZChC9+w5kFtw6gNPxKtD+Ytit4IDqA==",
-      "type": "package",
-      "path": "microsoft.owin.security/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.Security.XML",
-        "lib/net45/Microsoft.Owin.Security.dll",
-        "microsoft.owin.security.3.0.0.nupkg.sha512",
-        "microsoft.owin.security.nuspec"
-      ]
-    },
-    "Microsoft.Owin.Security.Cookies/3.0.0": {
-      "sha512": "K+fWnCOj1AVR+1M+jjla8e+6N205MQqL3DIQMW3FkxHCIhumaRm4I5dsmUPgaTNN2yK1aMFEpSmosBq8ATVRyw==",
-      "type": "package",
-      "path": "microsoft.owin.security.cookies/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.Security.Cookies.dll",
-        "lib/net45/Microsoft.Owin.Security.Cookies.xml",
-        "microsoft.owin.security.cookies.3.0.0.nupkg.sha512",
-        "microsoft.owin.security.cookies.nuspec"
-      ]
-    },
-    "Microsoft.Owin.Security.OAuth/3.0.0": {
-      "sha512": "MM575KI7Y5iVRN6J0VlCEXEGDfkDZ9q3W+w62x0XpxhIGIMk/xtuVXEqWi3p/rNyl0+ZJAfKYX+s85a68MTbdg==",
-      "type": "package",
-      "path": "microsoft.owin.security.oauth/3.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.Security.OAuth.XML",
-        "lib/net45/Microsoft.Owin.Security.OAuth.dll",
-        "microsoft.owin.security.oauth.3.0.0.nupkg.sha512",
-        "microsoft.owin.security.oauth.nuspec"
-      ]
-    },
     "Microsoft.Tpl.Dataflow/4.5.24": {
       "sha512": "6BE4Vu74+dkv5AkJd+UxW1sFMepMZOVlUoMZDUKqhc4Bf7pe7yySzCj6QrowUZbCqcDPwOiQsAgz3nXiLQSyMw==",
       "type": "package",
       "path": "microsoft.tpl.dataflow/4.5.24",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "License-Stable.rtf",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Dataflow.dll",
         "lib/portable-net45+win8+wp8+wpa81/system.threading.tasks.dataflow.xml",
@@ -9865,6 +9148,7 @@
       "path": "microsoft.web.infrastructure/1.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net40/Microsoft.Web.Infrastructure.dll",
         "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
         "microsoft.web.infrastructure.nuspec"
@@ -9931,17 +9215,6 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "Owin/1.0.0": {
-      "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
-      "type": "package",
-      "path": "owin/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net40/Owin.dll",
-        "owin.1.0.0.nupkg.sha512",
-        "owin.nuspec"
       ]
     },
     "stdole/7.0.3302": {
@@ -10135,6 +9408,7 @@
       "path": "system.componentmodel.annotations/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -11255,52 +10529,50 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETFramework,Version=v4.7.2": [
+    ".NETFramework,Version=v4.8": [
       "EPiServerProtectedAddon >= 1.0.0",
       "Microsoft.VSSDK.BuildTools >= 16.1.3128",
       "Microsoft.VisualStudio.SDK >= 16.0.200"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ha.bui\\.nuget\\packages\\": {}
+    "C:\\Users\\habui84\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+      "projectUniqueName": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
       "projectName": "EPiServerProtectedAddonProjectWizard",
-      "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
-      "packagesPath": "C:\\Users\\ha.bui\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
+      "projectPath": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\EPiServerProtectedAddonProjectWizard.csproj",
+      "packagesPath": "C:\\Users\\habui84\\.nuget\\packages\\",
+      "outputPath": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddonProjectWizard\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
-        "C:\\Users\\ha.bui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "D:\\projects\\NitecoVsix\\NitecoVsix\\.nuget\\NuGet.Config",
+        "C:\\Users\\habui84\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net472"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\Projects\\Niteco\\BitBucket\\gt-episerverbuild\\SolutionFiles\\LocalPackages": {},
-        "http://hephaestus.maginus.com/nuget": {},
-        "http://nuget.episerver.com/feed/packages.svc/": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.episerver.com/feed/packages.svc/": {}
       },
       "frameworks": {
-        "net472": {
+        "net48": {
           "projectReferences": {
-            "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
-              "projectPath": "D:\\Projects\\NitecoOPS\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj"
+            "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj": {
+              "projectPath": "D:\\projects\\NitecoVsix\\NitecoVsix\\EPiServerProtectedAddon\\EPiServerProtectedAddon.csproj"
             }
           }
         }
       }
     },
     "frameworks": {
-      "net472": {
+      "net48": {
         "dependencies": {
           "Microsoft.VSSDK.BuildTools": {
             "target": "Package",
@@ -11325,46 +10597,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "EPiServer.CMS.UI.AspNetIdentity 11.20.1 depends on Microsoft.Owin.Security (>= 2.2.1) but Microsoft.Owin.Security 2.2.1 was not found. An approximate best match of Microsoft.Owin.Security 3.0.0 was resolved.",
-      "libraryId": "Microsoft.Owin.Security",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "EPiServer.CMS.UI.AspNetIdentity 11.20.1 depends on Microsoft.Owin.Security.Cookies (>= 2.2.1) but Microsoft.Owin.Security.Cookies 2.2.1 was not found. An approximate best match of Microsoft.Owin.Security.Cookies 3.0.0 was resolved.",
-      "libraryId": "Microsoft.Owin.Security.Cookies",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "EPiServer.CMS.UI.AspNetIdentity 11.20.1 depends on Microsoft.Owin.Security.OAuth (>= 2.2.1) but Microsoft.Owin.Security.OAuth 2.2.1 was not found. An approximate best match of Microsoft.Owin.Security.OAuth 3.0.0 was resolved.",
-      "libraryId": "Microsoft.Owin.Security.OAuth",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.2",
-        ".NETFramework,Version=v4.7.2/win",
-        ".NETFramework,Version=v4.7.2/win-x64",
-        ".NETFramework,Version=v4.7.2/win-x86"
-      ]
-    }
-  ]
+  }
 }
